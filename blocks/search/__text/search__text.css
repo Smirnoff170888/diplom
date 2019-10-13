@@ -1,0 +1,12 @@
+.search__text {
+    color: #FFF;
+    width: 90%;
+    margin: 0;
+    margin-top: 32px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: normal;
+    font-family: Roboto;
+    font-style: normal;
+    text-align: left;
+}

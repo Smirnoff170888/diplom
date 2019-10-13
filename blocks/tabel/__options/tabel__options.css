@@ -1,0 +1,6 @@
+.tabel__options {
+    width: 100%;
+    margin: 0;
+    box-shadow: inset 0px -1px 0px #1A1B22;
+    display: flex;
+}

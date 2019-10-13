@@ -1,0 +1,9 @@
+.news-cards__card {
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    margin: 0;
+}

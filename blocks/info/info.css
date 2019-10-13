@@ -1,0 +1,13 @@
+@import url("./__subtitle/info__subtitle.css");
+@import url("./__link/info__link.css");
+@import url("./__wrap/info__wrap.css");
+@import url("./__paragraph/info__paragraph.css");
+@import url("./__text/info__text.css");
+@import url("./__bold/info__bold.css");
+
+.info {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}

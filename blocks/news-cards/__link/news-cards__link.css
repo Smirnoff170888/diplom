@@ -1,0 +1,19 @@
+.news-cards__link {
+    font-family: Roboto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #1A1B22;
+    text-align: right;
+    padding-top: 14px;
+}
+
+.news-cards__link:hover {
+    color: #696969;
+}
+
+.news-cards__link:active {
+    color: black;
+}

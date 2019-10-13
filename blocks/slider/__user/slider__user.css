@@ -1,0 +1,7 @@
+.slider__user {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-top: 0px;
+    padding-left: 16px;
+}

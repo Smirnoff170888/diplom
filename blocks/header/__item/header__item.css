@@ -1,0 +1,4 @@
+.header__item {
+    z-index: 1;
+    display: inline-block;
+}

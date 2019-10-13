@@ -1,0 +1,19 @@
+@import url("./__title/tabel__title.css");
+@import url("./__content/tabel__content.css");
+@import url("./__options/tabel__options.css");
+@import url("./__info/tabel__info.css");
+@import url("./__date/tabel__date.css");
+@import url("./__range/tabel__range.css");
+@import url("./__number/tabel__number.css");
+@import url("./__gistogramma/tabel__gistogramma.css");
+@import url("./__col/tabel__col.css");
+@import url("./__day/tabel__day.css");
+@import url("./__row/tabel__row.css");
+@import url("./__set/tabel__set.css");
+@import url("./__count/tabel__count.css");
+
+.tabel {
+    width: 100%;
+    background-color: #F5F6F7;
+    margin: 0;
+}

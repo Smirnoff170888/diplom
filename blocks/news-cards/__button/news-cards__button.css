@@ -1,0 +1,29 @@
+.news-cards__button {
+    width: 288px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 80px;
+    color: #1A1B22;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 18px 22px;
+}
+
+.news-cards__button:hover {
+    background: #E5E5E5;
+    opacity: 0.9;
+    border: 1px solid #E5E5E5;
+}
+
+.news-cards__button:focus {
+    outline: none;
+}
+
+.news-cards__button:active {
+    outline: none;
+}

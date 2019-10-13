@@ -1,0 +1,6 @@
+.info__paragraph {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+}

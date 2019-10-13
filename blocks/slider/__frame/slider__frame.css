@@ -1,0 +1,6 @@
+.slider__frame {
+    display: flex;
+    overflow: hidden;
+    margin-left: -370px;
+    width: 125%;
+}

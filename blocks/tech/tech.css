@@ -1,0 +1,10 @@
+@import url("./__wrapper/tech__wrapper.css");
+@import url("./__container/tech__container.css");
+@import url("./__item/tech__item.css");
+@import url("./__title/tech__title.css");
+@import url("./__icon/tech__icon.css");
+
+.tech {
+    width: 100%;
+    background-color: #F5F6F7;
+}

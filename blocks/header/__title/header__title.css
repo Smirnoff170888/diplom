@@ -1,0 +1,25 @@
+@import url("./_white/header__title_white.css");
+@import url("./_black/header__title_black.css");
+
+.header__title {
+    width: 16.2%;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1023px) {
+    .header__title {
+        width: 29.2%;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .header__title {
+        width: 40.3%;
+        font-size: 16px;
+    }
+}

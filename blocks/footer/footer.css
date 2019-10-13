@@ -1,0 +1,16 @@
+@import url("./__navigation/footer__navigation.css");
+@import url("./__nav/footer__nav.css");
+@import url("./__social/footer__social.css");
+@import url("./__copyright/footer__copyright.css");
+@import url("./__link/footer__link.css");
+@import url("./__item/footer__item.css");
+@import url("./__icon/footer__icon.css");
+
+.footer {
+    margin: 0 auto;
+    display: flex;
+    padding-top: 33px;
+    padding-bottom: 25px;
+    width: 85.6%;
+    justify-content: space-between;
+}

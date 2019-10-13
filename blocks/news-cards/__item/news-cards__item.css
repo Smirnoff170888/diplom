@@ -1,0 +1,9 @@
+.news-cards__item {
+    display: grid;
+    grid-template-columns: 27.8% 27.8% 27.8%;
+    grid-gap: 16px;
+    margin: auto;
+    width: 100%;
+    margin-top: 64px;
+    padding-left: 104px;
+}

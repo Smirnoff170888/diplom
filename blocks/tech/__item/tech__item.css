@@ -1,0 +1,6 @@
+.tech__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 13px;
+}
