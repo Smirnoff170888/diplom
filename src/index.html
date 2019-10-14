@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NewsAnalizer</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" type="image/png" sizes="32x32" href="./image/fv.png">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="<%=require('./image/fv.png') %>">
 </head>
 <body class="body">
     <div class="root">
 
         <header class="header">
-            <img src="image/georgia-de-lotz--UsJoNxLaNo-unsplash.png" alt="Смартфон в руке" class="header__image">
+            <img src="<%=require('./image/georgia-de-lotz--UsJoNxLaNo-unsplash.png') %>" alt="Смартфон в руке" class="header__image">
             <nav class="header__navigation">
                 <h2 class="header__title header__title_white">NewsAnalyzer</h2>
                 <ul class="header__nav">
@@ -39,7 +39,7 @@
                     <p class="news-cards__text">Идет поиск новостей...</p>
                 </div>
                 <div class="news-cards__not-found">
-                    <img src="image/not-found_v1.png" alt="Грустный смайлик" class="news-cards__icon">
+                    <img src="<%=require('./image/not-found_v1.png') %>" alt="Грустный смайлик" class="news-cards__icon">
                     <h3 class="news-cards__subtitle">Ничего не найдено</h3>
                     <p class="news-cards__text">К сожалению по вашему запросу ничего не найдено.</p>
                 </div>
@@ -51,7 +51,7 @@
                     <div class="news-cards__item">
                         <div class="news-cards__card">
                             <div class="news-cards__wrapper">
-                                <img src="image/image_08.png" alt="Растение" class="news-cards__image">
+                                <img src="<%=require('./image/image_08.png') %>" alt="Растение" class="news-cards__image">
                                 <p class="news-cards__date">2 августа, 2019</p>
                                 <h3 class="news-cards__news">Национальное достояние – парки</h3>
                                 <p class="news-cards__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
@@ -60,7 +60,7 @@
                         </div>
                         <div class="news-cards__card">
                             <div class="news-cards__wrapper">
-                                <img src="image/image_08.png" alt="Растение" class="news-cards__image">
+                                <img src="<%=require('./image/image_08.png') %>" alt="Растение" class="news-cards__image">
                                 <p class="news-cards__date">2 августа, 2019</p>
                                 <h3 class="news-cards__news">Лесные огоньки: история одной фотографии</h3>
                                 <p class="news-cards__paragraph">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
@@ -69,7 +69,7 @@
                         </div>
                         <div class="news-cards__card">
                             <div class="news-cards__wrapper">
-                                <img src="image/image_08.png" alt="Растение" class="news-cards__image">
+                                <img src="<%=require('./image/image_08.png') %>" alt="Растение" class="news-cards__image">
                                 <p class="news-cards__date">2 августа, 2019</p>
                                 <h3 class="news-cards__news">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
                                 <p class="news-cards__paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
@@ -78,7 +78,7 @@
                         </div>
                         <div class="news-cards__card">
                             <div class="news-cards__wrapper">
-                                <img src="image/image_08.png" alt="Растение" class="news-cards__image">
+                                <img src="<%=require('./image/image_08.png') %>" alt="Растение" class="news-cards__image">
                                 <p class="news-cards__date">2 августа, 2019</p>
                                 <h3 class="news-cards__news">Национальное достояние – парки</h3>
                                 <p class="news-cards__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
@@ -87,7 +87,7 @@
                         </div>
                         <div class="news-cards__card">
                             <div class="news-cards__wrapper">
-                                <img src="image/image_08.png" alt="Растение" class="news-cards__image">
+                                <img src="<%=require('./image/image_08.png') %>" alt="Растение" class="news-cards__image">
                                 <p class="news-cards__date">2 августа, 2019</p>
                                 <h3 class="news-cards__news">Лесные огоньки: история одной фотографии</h3>
                                 <p class="news-cards__paragraph">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="news-cards__card">
                             <div class="news-cards__wrapper">
-                                <img src="image/image_08.png" alt="Растение" class="news-cards__image">
+                                <img src="<%=require('./image/image_08.png') %>" alt="Растение" class="news-cards__image">
                                 <p class="news-cards__date">2 августа, 2019</p>
                                 <h3 class="news-cards__news">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
                                 <p class="news-cards__paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
@@ -111,7 +111,7 @@
             </section>
 
             <section class="author">
-                <img src="image/image-10-10-19-01-51.jpeg" alt="Фото автора" class="author__avatar">
+                <img src="<%=require('./image/image-10-10-19-01-51.jpg') %>" alt="Фото автора" class="author__avatar">
                 <div class="author__container">
                     <h2 class="content-title">Об авторе</h2>
                     <p class="author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
@@ -130,11 +130,11 @@
                 </ul>
             </nav>
             <div class="footer__social">
-                <a class="footer__gh" href="https://github.com/Smirnoff170888"><img src="image/Vector.png" alt="Иконка Github" class="footer__icon"></a>
-                <a class="footer__fb" href="https://www.facebook.com/yandex.praktikum/"><img src="image/Vector_fb.png" alt="Иконка Facebook" class="footer__icon"></a>
+                <a class="footer__gh" href="https://github.com/Smirnoff170888"><img src="<%=require('./image/icon_gh.png') %>" alt="Иконка Github" class="footer__icon"></a>
+                <a class="footer__fb" href="https://www.facebook.com/yandex.praktikum/"><img src="<%=require('./image/icon_fb.png') %>" alt="Иконка Facebook" class="footer__icon"></a>
             </div>
         </footer>
     </div>
-    
+    <script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>" defer></script>
 </body>
 </html>

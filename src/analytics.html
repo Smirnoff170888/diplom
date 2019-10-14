@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Главная/Аналитика</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" type="image/png" sizes="32x32" href="./image/Group (2).png">
-    <link rel="shortcut icon" type="image/png" sizes="32x32" href="./image/Group (3).png">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="<%=require('./image/fv3.png') %>">
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="<%=require('./image/fv4.png') %>">
 </head>
 <body>
     <div class="root">
@@ -91,11 +91,11 @@
                     </ul>
                 </nav>
                 <div class="footer__social">
-                    <a class="footer__gh" href="https://github.com/Smirnoff170888"><img src="image/Vector.png" alt="Иконка Github" class="footer__icon"></a>
-                    <a class="footer__fb" href="https://www.facebook.com/yandex.praktikum/"><img src="image/Vector_fb.png" alt="Иконка Facebook" class="footer__icon"></a>
+                    <a class="footer__gh" href="https://github.com/Smirnoff170888"><img src="<%=require('./image/icon_gh.png') %>" alt="Иконка Github" class="footer__icon"></a>
+                    <a class="footer__fb" href="https://www.facebook.com/yandex.praktikum/"><img src="<%=require('./image/icon_fb.png') %>" alt="Иконка Facebook" class="footer__icon"></a>
                 </div>
             </footer>
     </div>
-    
+    <script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>" defer></script>
 </body>
 </html>
