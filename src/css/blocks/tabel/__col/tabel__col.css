@@ -1,0 +1,25 @@
+.tabel__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    width: 8.4%;
+}
+
+@media screen and (max-width: 1279px) {
+    .tabel__col {
+        width: 12%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .tabel__col {
+        width: 15.1%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .tabel__col {
+        width: 22.2%;
+    }
+}

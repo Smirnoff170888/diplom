@@ -1,7 +1,0 @@
-.tech__container {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    grid-gap: 40px;
-    width: 53.6%;
-    padding-left: 176px;
-}

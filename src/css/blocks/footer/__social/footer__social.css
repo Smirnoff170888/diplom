@@ -1,0 +1,18 @@
+.footer__social {
+    display: flex;
+    justify-content: space-between;
+    width: 8.6%;
+    margin: 0;
+}
+
+@media screen and (max-width: 1023px) {
+    .footer__social {
+        width: 13.9%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer__social {
+        width: 23.6%;
+    }
+}

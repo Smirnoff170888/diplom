@@ -1,0 +1,25 @@
+.tech__container {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-gap: 40px;
+    width: 53.6%;
+    padding-left: 176px;
+}
+
+@media screen and (max-width: 1279px) {
+    .tech__container {
+        width: 100%;
+        grid-template-columns: 13% 13% 13.2% 13%;
+        grid-gap: 94px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .tech__container {
+        width: 100%;
+        grid-template-columns: 30.6% 30.6%;
+        grid-gap: 64px;
+        padding: 0;
+    }
+}

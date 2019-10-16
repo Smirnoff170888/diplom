@@ -1,0 +1,20 @@
+.commits {
+    width: 100%;
+    margin: 0;
+    background-color: #F5F6F7;
+    padding-top: 72px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1023px) {
+    .commits {
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .commits {
+        padding-top: 32px;
+    }
+}

@@ -1,0 +1,24 @@
+.news-cards__paragraph {
+    width: 88%;
+    margin: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1A1B22;
+    text-align: left;
+    padding-top: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+@media screen and (max-width: 1023px) {
+    .news-cards__paragraph {
+        padding-top: 10px;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

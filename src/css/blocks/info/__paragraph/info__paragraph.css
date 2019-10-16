@@ -1,0 +1,12 @@
+.info__paragraph {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+}
+
+@media screen and (max-width: 424px) {
+    .info__paragraph {
+        padding-top: 16px;
+    }
+}
