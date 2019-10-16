@@ -17,7 +17,7 @@ module.exports = {
     },
     output: {
             path: path.resolve(__dirname, 'dist'),
-            publicPath: '/',
+            publicPath: '/diplom/',
             filename: 'js/[name].[chunkhash].js'
     },
     module: {
