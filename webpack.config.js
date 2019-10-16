@@ -10,10 +10,9 @@ const isProd = (process.env.NODE_ENV === 'production');
 
 module.exports = {
     entry: {
-      index: './src/css/index.css',
-      about: './src/css/about.css',
-      analytics: './src/css/analytics.css',
-      main: './src/js/wentry.js'
+      index: ['./src/css/index.css', './src/js/windex.js'],
+      about: ['./src/css/about.css', './src/js/wabout.js'],
+      analytics: ['./src/css/analytics.css', './src/js/wanalytics.js']
     },
     output: {
             path: path.resolve(__dirname, 'dist'),

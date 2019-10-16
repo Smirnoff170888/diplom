@@ -1,1 +1,6 @@
-import "../css/about.css";
+import GhApi from './classes/GhApi.js';
+import CommitView from './classes/CommitView.js';
+
+const api = new GhApi({user: 'smirnoff170888', repo: 'diplom'});
+const commitContainer = document.querySelector('.slider__frame');
+api.getCommits(data => data.forEach(element => new CommitView(element, commitContainer)));
