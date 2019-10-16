@@ -5,3 +5,15 @@
     margin: 0;
     width: 91.6%;
 }
+
+@media screen and (max-width: 1023px) {
+    .tabel__row {
+        width: 83%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .tabel__row {
+        width: 61.1%;
+    }
+}

@@ -1,0 +1,18 @@
+.slider__form {
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 32px;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 424px) {
+    .slider__form {
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .slider__form {
+        width: 90%;
+    }
+}

@@ -8,3 +8,17 @@
     padding-bottom: 94px;
     width: 85.8%;
 }
+
+@media screen and (max-width: 1023px) {
+    .for-clients {
+        width: 89.6%;
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .for-clients {
+        width: 90%;
+        padding-top: 16px;
+    }
+}

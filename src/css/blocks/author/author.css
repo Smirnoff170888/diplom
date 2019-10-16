@@ -8,3 +8,18 @@
     padding-top: 80px;
     padding-bottom: 80px;
 }
+
+@media screen and (max-width: 1023px) {
+    .author {
+        padding-top: 40px;
+        padding-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .author {
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 44px;
+    }
+}

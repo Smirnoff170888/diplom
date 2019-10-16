@@ -27,3 +27,16 @@
 .news-cards__button:active {
     outline: none;
 }
+
+
+@media screen and (max-width: 1023px) {
+    .news-cards__button {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .news-cards__button {
+        width: 288px;
+    }
+}

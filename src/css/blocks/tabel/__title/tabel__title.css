@@ -9,3 +9,30 @@
     padding-top: 80px;
     padding-left: 104px;
 }
+
+@media screen and (max-width: 1279px) {
+    .tabel__title {
+        padding: 0;
+        width: 85.8%;
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .tabel__title {
+        padding: 0;
+        width: 85.8%;
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .tabel__title {
+        padding: 0;
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 24px;
+    }
+}

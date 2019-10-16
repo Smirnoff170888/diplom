@@ -9,3 +9,19 @@
     width: 85%;
     margin: 0;
 }
+
+@media screen and (max-width: 800px) {
+    .search__title {
+        width: 85.2%;
+        font-size: 36px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .search__title {
+        width: 100%;
+        font-size: 36px;
+        line-height: 40px;
+    }
+}

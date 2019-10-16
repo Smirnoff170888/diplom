@@ -5,3 +5,30 @@
     margin-top: 80px;
     padding-left: 104px;
 }
+
+@media screen and (max-width: 1279px) {
+    .info__wrap {
+        padding: 0;
+        width: 85.8%;
+        margin: 0 auto;
+        padding-top: 64px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .info__wrap {
+        padding: 0;
+        width: 89.3%;
+        margin: 0 auto;
+        padding-top: 64px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .info__wrap {
+        padding: 0;
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 0px;
+    }
+}

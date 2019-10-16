@@ -4,10 +4,25 @@
 @import url("./__paragraph/info__paragraph.css");
 @import url("./__text/info__text.css");
 @import url("./__bold/info__bold.css");
+@import url("./__title/info__title.css");
 
 .info {
     width: 100%;
     margin: 0 auto;
     padding-top: 40px;
     padding-bottom: 80px;
+}
+
+@media screen and (max-width: 1023px) {
+    .info {
+        padding-top: 32px;
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .info {
+        padding-top: 16px;
+        padding-bottom: 24px;
+    }
 }

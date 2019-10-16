@@ -20,3 +20,17 @@
     background: #347EFF;
     outline: none;
 }
+
+@media screen and (max-width: 1023px) {
+    .search__button {
+        width: 35.7%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .search__button {
+        width: 100%;
+        position: relative;
+        margin-top: 16px;
+    }
+}
