@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NewsAnalizer</title>
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.index.css %>">
     <link rel="shortcut icon" type="image/png" sizes="32x32" href="<%=require('./image/fv.png') %>">
 </head>
 <body class="body">
     <div class="root">
 
         <header class="header">
-            <img src="<%=require('./image/georgia-de-lotz--UsJoNxLaNo-unsplash.png') %>" alt="Смартфон в руке" class="header__image">
+            <picture>
+                <source srcset="<%=require('./image/bg768.png') %>" media="(max-width: 768px) and (min-width: 426px)">
+                <source srcset="<%=require('./image/bg320.png') %>" media="(max-width: 425px)">
+                <img src="<%=require('./image/bg.png') %>" alt="Смартфон в руке" class="header__image">
+            </picture>
             <nav class="header__navigation">
                 <h2 class="header__title header__title_white">NewsAnalyzer</h2>
                 <ul class="header__nav">
@@ -51,7 +55,7 @@
                     <div class="news-cards__item">
                         <div class="news-cards__card">
                             <div class="news-cards__wrapper">
-                                <img src="<%=require('./image/image_08.png') %>" alt="Растение" class="news-cards__image">
+                                <img src="<%=require('./image/plant.png') %>" alt="Растение" class="news-cards__image">
                                 <p class="news-cards__date">2 августа, 2019</p>
                                 <h3 class="news-cards__news">Национальное достояние – парки</h3>
                                 <p class="news-cards__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
@@ -60,7 +64,7 @@
                         </div>
                         <div class="news-cards__card">
                             <div class="news-cards__wrapper">
-                                <img src="<%=require('./image/image_08.png') %>" alt="Растение" class="news-cards__image">
+                                <img src="<%=require('./image/plant.png') %>" alt="Растение" class="news-cards__image">
                                 <p class="news-cards__date">2 августа, 2019</p>
                                 <h3 class="news-cards__news">Лесные огоньки: история одной фотографии</h3>
                                 <p class="news-cards__paragraph">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
@@ -69,7 +73,7 @@
                         </div>
                         <div class="news-cards__card">
                             <div class="news-cards__wrapper">
-                                <img src="<%=require('./image/image_08.png') %>" alt="Растение" class="news-cards__image">
+                                <img src="<%=require('./image/plant.png') %>" alt="Растение" class="news-cards__image">
                                 <p class="news-cards__date">2 августа, 2019</p>
                                 <h3 class="news-cards__news">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
                                 <p class="news-cards__paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
@@ -78,7 +82,7 @@
                         </div>
                         <div class="news-cards__card">
                             <div class="news-cards__wrapper">
-                                <img src="<%=require('./image/image_08.png') %>" alt="Растение" class="news-cards__image">
+                                <img src="<%=require('./image/plant.png') %>" alt="Растение" class="news-cards__image">
                                 <p class="news-cards__date">2 августа, 2019</p>
                                 <h3 class="news-cards__news">Национальное достояние – парки</h3>
                                 <p class="news-cards__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
@@ -87,7 +91,7 @@
                         </div>
                         <div class="news-cards__card">
                             <div class="news-cards__wrapper">
-                                <img src="<%=require('./image/image_08.png') %>" alt="Растение" class="news-cards__image">
+                                <img src="<%=require('./image/plant.png') %>" alt="Растение" class="news-cards__image">
                                 <p class="news-cards__date">2 августа, 2019</p>
                                 <h3 class="news-cards__news">Лесные огоньки: история одной фотографии</h3>
                                 <p class="news-cards__paragraph">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
@@ -96,7 +100,7 @@
                         </div>
                         <div class="news-cards__card">
                             <div class="news-cards__wrapper">
-                                <img src="<%=require('./image/image_08.png') %>" alt="Растение" class="news-cards__image">
+                                <img src="<%=require('./image/plant.png') %>" alt="Растение" class="news-cards__image">
                                 <p class="news-cards__date">2 августа, 2019</p>
                                 <h3 class="news-cards__news">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
                                 <p class="news-cards__paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
@@ -111,7 +115,7 @@
             </section>
 
             <section class="author">
-                <img src="<%=require('./image/image-10-10-19-01-51.jpg') %>" alt="Фото автора" class="author__avatar">
+                <img src="<%=require('./image/myphoto.jpg') %>" alt="Фото автора" class="author__avatar">
                 <div class="author__container">
                     <h2 class="content-title">Об авторе</h2>
                     <p class="author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
@@ -122,19 +126,21 @@
 
         <footer class="footer">
             <p class="footer__copyright">&copy;2019  Supersite</p>
-            <nav class="footer__navigation">
-                <ul class="footer__nav">
-                    <li class="footer__item"><a class="footer__link" href="./index.html">Главная</a></li>
-                    <li class="footer__item"><a class="footer__link" href="./about.html">О проекте</a></li>
-                    <li class="footer__item"><a class="footer__link" href="https://praktikum.yandex.ru/frontend">Яндекс.Практикум</a></li>
-                </ul>
-            </nav>
-            <div class="footer__social">
-                <a class="footer__gh" href="https://github.com/Smirnoff170888"><img src="<%=require('./image/icon_gh.png') %>" alt="Иконка Github" class="footer__icon"></a>
-                <a class="footer__fb" href="https://www.facebook.com/yandex.praktikum/"><img src="<%=require('./image/icon_fb.png') %>" alt="Иконка Facebook" class="footer__icon"></a>
+            <div class="footer__wrapper">
+                <nav class="footer__navigation">
+                    <ul class="footer__nav">
+                        <li class="footer__item"><a class="footer__link" href="./index.html">Главная</a></li>
+                        <li class="footer__item"><a class="footer__link" href="./about.html">О проекте</a></li>
+                        <li class="footer__item"><a class="footer__link" href="https://praktikum.yandex.ru/frontend">Яндекс.Практикум</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__social">
+                    <a class="footer__gh" href="https://github.com/Smirnoff170888"><img src="<%=require('./image/icon_gh.png') %>" alt="Иконка Github" class="footer__icon"></a>
+                    <a class="footer__fb" href="https://www.facebook.com/yandex.praktikum/"><img src="<%=require('./image/icon_fb.png') %>" alt="Иконка Facebook" class="footer__icon"></a>
+                </div>
             </div>
         </footer>
     </div>
-    <script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>" defer></script>
+    <script src="<%=htmlWebpackPlugin.files.chunks.index.entry %>" defer></script>
 </body>
 </html>

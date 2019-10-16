@@ -9,10 +9,16 @@ const isDev = (process.env.NODE_ENV === 'development');
 const isProd = (process.env.NODE_ENV === 'production');
 
 module.exports = {
-    entry: { main: './src/js/wentry.js' },
+    entry: {
+      index: './src/css/index.css',
+      about: './src/css/about.css',
+      analytics: './src/css/analytics.css',
+      main: './src/js/wentry.js'
+    },
     output: {
             path: path.resolve(__dirname, 'dist'),
-            filename: '[name].[chunkhash].js'
+            publicPath: '/',
+            filename: 'js/[name].[chunkhash].js'
     },
     module: {
         rules: [
@@ -37,11 +43,11 @@ module.exports = {
                               quality: 65
                             },
                             optipng: {
-                              enabled: false,
+                              enabled: true,
                             },
                             pngquant: {
-                              quality: [0.65, 0.90],
-                              speed: 4
+                              quality: [0.8, 1],
+                              speed: isDev ? 11 : 2
                             },
                             gifsicle: {
                               interlaced: false,
@@ -64,7 +70,7 @@ module.exports = {
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         }),
         new MiniCssExtractPlugin({
-            filename: 'style.[contenthash].css'
+            filename: 'css/[name].[contenthash].css'
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,

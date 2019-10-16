@@ -17,6 +17,12 @@
     }
 }
 
+@media screen and (max-width: 767px) {
+    .header__title {
+        font-size: 16px;
+    }
+}
+
 @media screen and (max-width: 374px) {
     .header__title {
         width: 40.3%;

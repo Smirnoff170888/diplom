@@ -15,6 +15,7 @@
 @import url("./__arrows/slider__arrows.css");
 @import url("./__gradient/slider__gradient.css");
 @import url("./__button/slider__button.css");
+@import url("./__form/slider__form.css");
 
 .slider {
     width: 100%;

@@ -9,3 +9,17 @@
     margin: 0;
     width: 16.2%;
 }
+
+@media screen and (max-width: 1023px) {
+    .footer__copyright {
+        width: 29%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer__copyright {
+        order: 2;
+        width: 100%;
+    }
+}
+

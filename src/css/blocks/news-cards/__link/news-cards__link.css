@@ -17,3 +17,22 @@
 .news-cards__link:active {
     color: black;
 }
+
+@media screen and (max-width: 1279px) {
+    .news-cards__link {
+        padding-top: 16px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .news-cards__link {
+        padding-top: 8px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .news-cards__link {
+        text-align: left;
+        padding-top: 16px;
+    }
+}

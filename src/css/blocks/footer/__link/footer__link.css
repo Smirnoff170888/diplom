@@ -17,3 +17,10 @@
 .footer__link:active {
     color: black;
 }
+
+@media screen and (max-width: 500px) {
+    .footer__link {
+        text-align: left;
+        line-height: 24px;
+    }
+}

@@ -12,3 +12,13 @@
     padding-left: 24px;
     padding-right: 24px;
 }
+
+@media screen and (max-width: 1023px) {
+    .news-cards__paragraph {
+        padding-top: 10px;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
