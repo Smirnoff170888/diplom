@@ -20,4 +20,16 @@ function formatDate(strDate) {
     return `${day} ${month}, ${year}`;
 }
 
-export default { formatDate: formatDate };
+function formatObjToURLParams(obj) {
+    let ret = '';
+    for (let k in obj) {
+        ret += ret ? '&' : '?';
+        ret += `${k}=${(obj[k])}`;
+    }
+    return ret;
+}
+
+export default {
+    formatDate: formatDate,
+    formatObjToURLParams: formatObjToURLParams
+};

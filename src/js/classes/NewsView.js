@@ -2,7 +2,6 @@ import Utils from '../helpers/Utils.js';
 
 export default class CommitView {
     constructor(data, container) {
-        console.log(data);
         this._data = data;
         this._elem = this.createDom();
         this._container = container;
@@ -26,5 +25,9 @@ export default class CommitView {
 
     render() {
         this._container.appendChild(this._elem);
+    }
+
+    destroy() {
+        this._elem.remove();
     }
 }

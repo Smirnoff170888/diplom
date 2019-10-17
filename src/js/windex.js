@@ -7,12 +7,14 @@ const elNewsContainer = document.querySelector('.news-cards__item');
 const elSearchForm = document.querySelector('.search__search-field');
 const elNextForm = document.querySelector('.news-cards__form');
 const elPreloadContainer = document.querySelector('.news-cards__search');
+const elNotFound = document.querySelector('.news-cards__not-found');
 
 const newsController = new NewsController({
-    search: elSearchForm,
-    next: elNextForm,
-    preloader: elPreloadContainer
-}, newsAPI);
+        search: elSearchForm,
+        next: elNextForm,
+        preloader: elPreloadContainer,
+        empty: elNotFound
+        }, { max: 20 }, newsAPI);
 
 newsController.onNewsFound = (news) => {
     return new NewsView(news, elNewsContainer);
