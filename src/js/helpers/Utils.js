@@ -20,4 +20,4 @@ function formatDate(strDate) {
     return `${day} ${month}, ${year}`;
 }
 
-export default { formateDate: formatDate };
+export default { formatDate: formatDate };
