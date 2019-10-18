@@ -36,3 +36,9 @@
         padding-top: 16px;
     }
 }
+
+@media screen and (max-width: 424px) {
+    .commits__link {
+        display: none;
+    }
+}

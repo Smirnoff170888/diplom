@@ -1,4 +1,4 @@
-.news-cards__button {
+.content-button {
     width: 288px;
     background: #FFFFFF;
     border: 1px solid #FFFFFF;
@@ -14,29 +14,29 @@
     padding: 18px 22px;
 }
 
-.news-cards__button:hover {
+.content-button:hover {
     background: #E5E5E5;
     opacity: 0.9;
     border: 1px solid #E5E5E5;
 }
 
-.news-cards__button:focus {
+.content-button:focus {
     outline: none;
 }
 
-.news-cards__button:active {
+.content-button:active {
     outline: none;
 }
 
 
 @media screen and (max-width: 1023px) {
-    .news-cards__button {
+    .content-button {
         width: 240px;
     }
 }
 
 @media screen and (max-width: 424px) {
-    .news-cards__button {
+    .content-button {
         width: 288px;
     }
 }
