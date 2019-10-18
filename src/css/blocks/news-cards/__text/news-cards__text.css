@@ -1,0 +1,33 @@
+.news-cards__text {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 24px;
+    text-align: center;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    padding-top: 24px;
+    color: #B6BCBF;
+    margin: 0 auto;
+    width: 20%;
+}
+
+@media screen and (max-width: 1023px) {
+    .news-cards__text {
+        width: 40%;
+        padding-top: 35px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .news-cards__text {
+        width: 60%;
+        padding-top: 35px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .news-cards__text {
+        width: 65%;
+        padding-top: 35px;
+    }
+}

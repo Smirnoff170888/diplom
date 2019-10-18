@@ -1,0 +1,19 @@
+.commits__container {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1023px) {
+    .commits__container {
+        width: 89.6%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .commits__container {
+        width: 90%;
+        flex-direction: column;
+    }
+}

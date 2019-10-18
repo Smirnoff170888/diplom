@@ -1,0 +1,42 @@
+.content-button {
+    width: 288px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 80px;
+    color: #1A1B22;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 18px 22px;
+}
+
+.content-button:hover {
+    background: #E5E5E5;
+    opacity: 0.9;
+    border: 1px solid #E5E5E5;
+}
+
+.content-button:focus {
+    outline: none;
+}
+
+.content-button:active {
+    outline: none;
+}
+
+
+@media screen and (max-width: 1023px) {
+    .content-button {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .content-button {
+        width: 288px;
+    }
+}

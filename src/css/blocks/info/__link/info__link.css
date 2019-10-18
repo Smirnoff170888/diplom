@@ -1,0 +1,17 @@
+.info__link {
+    color: #1A1B22;
+    text-decoration: none;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.info__link:hover {
+    color: #696969;
+}
+
+.info__link:active {
+    color: #000;
+}

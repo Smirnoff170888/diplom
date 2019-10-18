@@ -1,0 +1,11 @@
+.news-cards__subtitle {
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    font-family: Roboto Slab, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #1A1B22;
+    margin: 0 auto;
+    padding-top: 24px;
+}

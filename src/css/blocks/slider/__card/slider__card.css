@@ -1,0 +1,23 @@
+.slider__card {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border-radius: 16px;
+    margin: 0;
+    margin-left: 16px;
+}
+
+@media screen and (max-width: 1023px) {
+    .slider__card {
+        width: 336px;
+        margin-left: 8px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .slider__card {
+        width: 288px;
+        margin-bottom: 16px;
+    }
+}

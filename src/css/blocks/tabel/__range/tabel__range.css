@@ -1,0 +1,12 @@
+.tabel__range {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 104px;
+}
+
+@media screen and (max-width: 767px) {
+    .tabel__range {
+        display: none;
+    }
+}
+

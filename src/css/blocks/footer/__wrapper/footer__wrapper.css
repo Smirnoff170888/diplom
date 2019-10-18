@@ -1,0 +1,23 @@
+.footer__wrapper {
+    display: flex;
+    width: 68%;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+    .footer__wrapper {
+        width: 81%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .footer__wrapper {
+        width: 79%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer__wrapper {
+        width: 100%;
+    }
+}
