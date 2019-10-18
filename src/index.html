@@ -30,7 +30,7 @@
             <h1 class="search__title">Что в мире творится?</h1>
             <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
             <form class="search__search-field">
-                <input id="news" type="text" name="item" class="search__input" placeholder="Введите тему новости">
+                <input id="news" type="text" name="item" class="search__input" placeholder="Введите тему новости" required minlength="2" maxlength="55">
                 <button id="submit" name="search" type="submit" class="button search__button">Искать</button>
             </form>
         </section>
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                     <form class="news-cards__form">
-                        <button class="button news-cards__button" name="show" type="submit">Показать еще</button>
+                        <button class="button content-button" name="show" type="submit">Показать еще</button>
                     </form>
                 </div>
             </section>
@@ -117,7 +117,7 @@
             <section class="author">
                 <img src="<%=require('./image/myphoto.jpg') %>" alt="Фото автора" class="author__avatar">
                 <div class="author__container">
-                    <h2 class="content-title">Об авторе</h2>
+                    <h2 class="content-title">Об&nbsp;авторе</h2>
                     <p class="author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
                     <p class="author__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
                 </div>
@@ -125,7 +125,7 @@
         </main>
 
         <footer class="footer">
-            <p class="footer__copyright">&copy;2019  Supersite</p>
+            <p class="footer__copyright">&copy;2019  Смирнова Ирина</p>
             <div class="footer__wrapper">
                 <nav class="footer__navigation">
                     <ul class="footer__nav">

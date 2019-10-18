@@ -1,7 +1,7 @@
 .footer__copyright {
     font-size: 16px;
     line-height: 22px;
-    font-family: Roboto;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
     text-align: left;
@@ -15,6 +15,13 @@
         width: 29%;
     }
 }
+
+@media screen and (max-width: 760px) {
+    .footer__copyright {
+        width: 35%;
+    }
+}
+
 
 @media screen and (max-width: 500px) {
     .footer__copyright {

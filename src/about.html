@@ -24,11 +24,11 @@
             <section class="for-clients">
                 <h2 class="content-title">Клиентам</h2>
                 <div class="for-clients__paragraph">
-                    <p class="author__text">Этот сайт — дипломный проект студента Яндкс.Практикума. Его цель — показать, чему научился студент, и какими технологиями владеет.</p>
-                    <p class="author__text">Вёртска сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциальность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
-                    <p class="author__text">Карточки с новостям приходят с сервера и обрабатываются асихронно. То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.</p>
-                    <p class="author__text">При создании проекта была использона сборка технологией Webpack. Это современных подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также настроена сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных систем у них не будет проблем с отображением. А значит потенциальная аудитория возрастает.</p>
-                    <p class="author__text">Проект был проверен экспертами Яндекс.Практикума. И если вашему бизесу нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
+                    <p class="for-clients__text">Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, и какими технологиями владеет.</p>
+                    <p class="for-clients__text">Вёртска сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциальность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
+                    <p class="for-clients__text">Карточки с новостям приходят с сервера и обрабатываются асихронно. То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.</p>
+                    <p class="for-clients__text">При создании проекта была использона сборка технологией Webpack. Это современных подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также настроена сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных систем у них не будет проблем с отображением. А значит потенциальная аудитория возрастает.</p>
+                    <p class="for-clients__text">Проект был проверен экспертами Яндекс.Практикума. И если вашему бизесу нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
                 </div>
             </section>
 
@@ -60,7 +60,7 @@
             <section class="author">
                 <img src="<%=require('./image/myphoto.jpg') %>" alt="Фото автора" class="author__avatar">
                 <div class="author__container">
-                    <h2 class="content-title">Об авторе</h2>
+                    <h2 class="content-title">Об&nbsp;авторе</h2>
                     <p class="author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
                     <p class="author__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
                     <p class="author__text">Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
@@ -68,9 +68,9 @@
             </section>
 
             <section class="commits">
-                <div class="news-cards__result">
-                    <h2 class="content-title">История коммитов из&nbsp;GitHub</h2>
-                    <a href="https://github.com/Smirnoff170888" class="news-cards__link">Открыть в  Github &rsaquo;</a>
+                <div class="commits__container">
+                    <h2 class="commits__title">История коммитов из&nbsp;GitHub</h2>
+                    <a href="https://github.com/Smirnoff170888" class="commits__link">Открыть в  Github &rsaquo;</a>
                 </div>
                 <div class="slider">
                     <div class="slider__track" data-glide-el="track">
@@ -83,73 +83,71 @@
                             </div>
                         </div>
                         <ul class="slider__slides">
-                            <div class="slider__frame">
-                                <li class="slider__container">
-                                    <div class="slider__card">
-                                        <p class="slider__date">14 августа, 2019</p>
-                                        <div class="slider__info">
-                                            <img src="<%=require('./image/avaguest.jpg') %>" alt="Аватар комментатора" class="slider__avatar">
-                                            <div class="slider__user">
-                                                <h3 class="slider__name">Мария Фёдорова</h3>
-                                                <p class="slider__email">mariiifed@yandex.ru</p>
-                                            </div>
+                            <li class="slider__container">
+                                <div class="slider__card">
+                                    <p class="slider__date">14 августа, 2019</p>
+                                    <div class="slider__info">
+                                        <img src="<%=require('./image/avaguest.jpg') %>" alt="Аватар комментатора" class="slider__avatar">
+                                        <div class="slider__user">
+                                            <h3 class="slider__name">Мария Фёдорова</h3>
+                                            <p class="slider__email">mariiifed@yandex.ru</p>
                                         </div>
-                                        <p class="slider__text">Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
                                     </div>
-                                </li>
-                                <li class="slider__container">
-                                    <div class="slider__card">
-                                        <p class="slider__date">14 августа, 2019</p>
-                                        <div class="slider__info">
-                                            <img src="<%=require('./image/avaguest.jpg') %>" alt="Аватар комментатора" class="slider__avatar">
-                                            <div class="slider__user">
-                                                <h3 class="slider__name">Мария Фёдорова</h3>
-                                                <p class="slider__email">mariiifed@yandex.ru</p>
-                                            </div>
+                                    <p class="slider__text">Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+                                </div>
+                            </li>
+                            <li class="slider__container">
+                                <div class="slider__card">
+                                    <p class="slider__date">14 августа, 2019</p>
+                                    <div class="slider__info">
+                                        <img src="<%=require('./image/avaguest.jpg') %>" alt="Аватар комментатора" class="slider__avatar">
+                                        <div class="slider__user">
+                                            <h3 class="slider__name">Мария Фёдорова</h3>
+                                            <p class="slider__email">mariiifed@yandex.ru</p>
                                         </div>
-                                        <p class="slider__text">You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open   Tools > Plugins > Available plugins   and find and install Emmet plugin.</p>
                                     </div>
-                                </li>
-                                <li class="slider__container">
-                                    <div class="slider__card">
-                                        <p class="slider__date">14 августа, 2019</p>
-                                        <div class="slider__info">
-                                            <img src="<%=require('./image/avaguest.jpg') %>" alt="Аватар комментатора" class="slider__avatar">
-                                            <div class="slider__user">
-                                                <h3 class="slider__name">Мария Фёдорова</h3>
-                                                <p class="slider__email">mariiifed@yandex.ru</p>
-                                            </div>
+                                    <p class="slider__text">You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open   Tools > Plugins > Available plugins   and find and install Emmet plugin.</p>
+                                </div>
+                            </li>
+                            <li class="slider__container">
+                                <div class="slider__card">
+                                    <p class="slider__date">14 августа, 2019</p>
+                                    <div class="slider__info">
+                                        <img src="<%=require('./image/avaguest.jpg') %>" alt="Аватар комментатора" class="slider__avatar">
+                                        <div class="slider__user">
+                                            <h3 class="slider__name">Мария Фёдорова</h3>
+                                            <p class="slider__email">mariiifed@yandex.ru</p>
                                         </div>
-                                        <p class="slider__text">With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...</p>
                                     </div>
-                                </li>
-                                <li class="slider__container">
-                                    <div class="slider__card">
-                                        <p class="slider__date">14 августа, 2019</p>
-                                        <div class="slider__info">
-                                            <img src="<%=require('./image/avaguest.jpg') %>" alt="Аватар комментатора" class="slider__avatar">
-                                            <div class="slider__user">
-                                                <h3 class="slider__name">Мария Фёдорова</h3>
-                                                <p class="slider__email">mariiifed@yandex.ru</p>
-                                            </div>
+                                    <p class="slider__text">With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...</p>
+                                </div>
+                            </li>
+                            <li class="slider__container">
+                                <div class="slider__card">
+                                    <p class="slider__date">14 августа, 2019</p>
+                                    <div class="slider__info">
+                                        <img src="<%=require('./image/avaguest.jpg') %>" alt="Аватар комментатора" class="slider__avatar">
+                                        <div class="slider__user">
+                                            <h3 class="slider__name">Мария Фёдорова</h3>
+                                            <p class="slider__email">mariiifed@yandex.ru</p>
                                         </div>
-                                        <p class="slider__text">Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
                                     </div>
-                                </li>
-                                <li class="slider__container">
-                                    <div class="slider__card">
-                                        <p class="slider__date">14 августа, 2019</p>
-                                        <div class="slider__info">
-                                            <img src="<%=require('./image/avaguest.jpg') %>" alt="Аватар комментатора" class="slider__avatar">
-                                            <div class="slider__user">
-                                                <h3 class="slider__name">Мария Фёдорова</h3>
-                                                <p class="slider__email">mariiifed@yandex.ru</p>
-                                            </div>
+                                    <p class="slider__text">Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+                                </div>
+                            </li>
+                            <li class="slider__container">
+                                <div class="slider__card">
+                                    <p class="slider__date">14 августа, 2019</p>
+                                    <div class="slider__info">
+                                        <img src="<%=require('./image/avaguest.jpg') %>" alt="Аватар комментатора" class="slider__avatar">
+                                        <div class="slider__user">
+                                            <h3 class="slider__name">Мария Фёдорова</h3>
+                                            <p class="slider__email">mariiifed@yandex.ru</p>
                                         </div>
-                                        <p class="slider__text">Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
                                     </div>
-                                </li>
-                            </div>  
+                                    <p class="slider__text">Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+                                </div>
+                            </li> 
                         </ul>
                     </div>
                     <div class="slider__bullets" data-glid-el="controls[nav]">
@@ -158,14 +156,14 @@
                         <button class="slider__button" data-glid-dir="=2"></button>
                     </div>
                     <form class="slider__form">
-                        <button class="button news-cards__button" name="show" type="submit">Открыть в GitHub</button>
+                        <button class="button content-button" name="show" type="submit">Открыть в GitHub</button>
                     </form>
                 </div>
             </section>
         </main>
         
         <footer class="footer">
-            <p class="footer__copyright">&copy;2019  Supersite</p>
+            <p class="footer__copyright">&copy;2019  Смирнова Ирина</p>
             <div class="footer__wrapper">
                 <nav class="footer__navigation">
                     <ul class="footer__nav">

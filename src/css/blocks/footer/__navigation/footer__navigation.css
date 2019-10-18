@@ -1,12 +1,24 @@
 .footer__navigation {
     display: flex;
     justify-content: space-between;
-    width: 51%;
+    width: 45%;
 }
 
 @media screen and (max-width: 1023px) {
     .footer__navigation {
-        width: 66.8%;
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .footer__navigation {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .footer__navigation {
+        width: 66%;
     }
 }
 

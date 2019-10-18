@@ -4,7 +4,7 @@
     padding-left: 104px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
     .tabel__range {
         display: none;
     }

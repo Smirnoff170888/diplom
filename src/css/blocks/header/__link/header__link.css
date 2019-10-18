@@ -4,7 +4,7 @@
 @import url("./_white-active/header__link_white-active.css");
 
 .header__link {
-    font-family: Roboto;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
