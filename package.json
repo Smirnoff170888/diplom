@@ -19,6 +19,10 @@
     "url": "https://github.com/Smirnoff170888/diplom/issues"
   },
   "homepage": "https://github.com/Smirnoff170888/diplom#readme",
+  "engines": {
+    "node": ">= 10.16.0",
+    "npm": ">= 6.9.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
