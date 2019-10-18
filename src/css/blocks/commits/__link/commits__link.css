@@ -1,4 +1,4 @@
-.news-cards__link {
+.commits__link {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -10,28 +10,28 @@
     padding-top: 14px;
 }
 
-.news-cards__link:hover {
+.commits__link:hover {
     color: #696969;
 }
 
-.news-cards__link:active {
+.commits__link:active {
     color: black;
 }
 
 @media screen and (max-width: 1279px) {
-    .news-cards__link {
+    .commits__link {
         padding-top: 16px;
     }
 }
 
 @media screen and (max-width: 1023px) {
-    .news-cards__link {
+    .commits__link {
         padding-top: 8px;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .news-cards__link {
+    .commits__link {
         text-align: left;
         padding-top: 16px;
     }
