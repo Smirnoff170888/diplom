@@ -11,7 +11,19 @@
     }
 }
 
+@media screen and (max-width: 760px) {
+    .footer__social {
+        width: 12%;
+    }
+}
+
 @media screen and (max-width: 500px) {
+    .footer__social {
+        width: 14%;
+    }
+}
+
+@media screen and (max-width: 374px) {
     .footer__social {
         width: 23.6%;
     }

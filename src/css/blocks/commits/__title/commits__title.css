@@ -1,4 +1,4 @@
-.info__title {
+.commits__title {
     font-size: 40px;
     line-height: 46px;
     font-weight: normal;
@@ -8,16 +8,18 @@
     margin: 0;
 }
 
-@media screen and (max-width: 1023px) {
-    .info__title {
-        font-size: 32px;
+@media screen and (max-width: 1279px) {
+    .commits__title {
+        font-size: 30px;
         line-height: 34px;
+        width: 48.8%;
     }
 }
 
-@media screen and (max-width: 424px) {
-    .info__title {
+@media screen and (max-width: 374px) {
+    .commits__title {
         font-size: 30px;
-        line-height: 34px;
+        line-height: 40px;
+        width: 48.8%;
     }
 }

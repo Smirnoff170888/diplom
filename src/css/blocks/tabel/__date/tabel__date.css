@@ -23,3 +23,9 @@
         width: 22.2%;
     }
 }
+
+@media screen and (max-width: 374px) {
+    .tabel__date {
+        width: 33.3%;
+    }
+}

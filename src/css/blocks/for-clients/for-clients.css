@@ -1,11 +1,12 @@
 @import url("./__paragraph/for-clients__paragraph.css");
+@import url("./__text/for-clients__text.css");
 
 .for-clients {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     padding-top: 80px;
-    padding-bottom: 94px;
+    padding-bottom: 70px;
     width: 85.8%;
 }
 
@@ -13,6 +14,7 @@
     .for-clients {
         width: 89.6%;
         padding-top: 30px;
+        padding-bottom: 36px;
     }
 }
 
@@ -20,5 +22,6 @@
     .for-clients {
         width: 90%;
         padding-top: 16px;
+        padding-bottom: 0px;
     }
 }

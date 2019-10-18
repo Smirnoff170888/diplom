@@ -4,3 +4,9 @@
     box-shadow: inset 0px -1px 0px #1A1B22;
     display: flex;
 }
+
+@media screen and (max-width: 374px) {
+    .tabel__options {
+        width: 100%;
+    }
+}
