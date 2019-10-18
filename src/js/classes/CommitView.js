@@ -12,7 +12,7 @@ export default class CommitView {
     createDom() {
         const template = `
                 <div class="slider__card">
-                    <p class="slider__date">${Utils.formateDate(this._data.commit.committer.date)}</p>
+                    <p class="slider__date">${Utils.formatDate(this._data.commit.committer.date)}</p>
                     <div class="slider__info">
                         <img src="${this._data.author.avatar_url}" alt="Аватар комментатора" class="slider__avatar">
                         <div class="slider__user">

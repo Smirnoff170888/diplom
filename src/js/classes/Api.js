@@ -1,7 +1,7 @@
 export default class Api {
-    constructor(baseUrl, header) {
+    constructor(baseUrl, headers) {
         this._baseUrl = baseUrl;
-        this._header = header;
+        this._headers = headers;
     }
 
     async _query(path, method, data) {
