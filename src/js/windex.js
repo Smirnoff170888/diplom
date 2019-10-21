@@ -1,13 +1,9 @@
 import NewsApi from './classes/Api/NewsApi.js';
 import NewsCardComponent from './classes/Components/NewsCardComponent.js';
-import NewsController from './classes/Controlles/NewsController.js';
-import StorageController from './classes/Controlles/StorageController.js';
+import NewsController from './classes/Controllers/NewsController.js';
+import StorageController from './classes/Controllers/StorageController.js';
 
 const elNewsContainer = document.querySelector('.news-cards__item');
-const elSearchForm = document.querySelector('.search__search-field');
-const elNextForm = document.querySelector('.news-cards__form');
-const elPreloadContainer = document.querySelector('.news-cards__search');
-const elNotFound = document.querySelector('.news-cards__not-found');
 
 const newsAPI = new NewsApi('94ad67b6000f42d886d0825e6b9cd7c0');
 const storageController = new StorageController();
@@ -16,10 +12,10 @@ let newsParams = cachedData.params;
 if (!newsParams) newsParams = { newsPerPage: 20 };
 
 const newsController = new NewsController({
-        search: elSearchForm,
-        next: elNextForm,
-        preloader: elPreloadContainer,
-        empty: elNotFound
+        searchForm: '.search__search-field',
+        nextForm: '.news-cards__form',
+        preloadContainer: '.news-cards__search',
+        notFound: '.news-cards__not-found'
         }, newsParams, newsAPI);
 
 newsController.onNewsFound = (news, params) => {

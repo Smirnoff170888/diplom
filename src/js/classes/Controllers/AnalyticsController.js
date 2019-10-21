@@ -4,7 +4,7 @@ export default class AnalyticsController {
     constructor(data, elems) {
         this._data = data;
         this._byDay = {};
-        this.el = elems;
+        this.el = Utils.nodeElements(elems);
         const curDate = Utils.roundDay(this._data.params.from);
         for (let i = 0; i < 7; i++) {
             this._byDay[curDate.getTime() + i*1000*60*60*24] = 0;

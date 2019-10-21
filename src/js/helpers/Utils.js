@@ -52,9 +52,24 @@ function formatObjToURLParams(obj) {
     return ret;
 }
 
+function nodeElements(obj) {
+    const ret = {};
+    for (let k in obj) {
+        if (typeof(obj[k]) === 'string') {
+            const nodes = document.querySelectorAll(obj[k]);
+            ret[k] = (nodes.length && nodes.length == 1) ? nodes[0] : nodes;
+        } else if (typeof(obj[k]) === 'object' && !obj[k].nodeType)
+            ret[k] = nodeElements(obj[k]);
+        else
+            ret[k] = obj[k];
+    }
+    return ret;
+}
+
 export default {
     formatDate: formatDate,
     formateDateWeek: formatDateWeek,
     roundDay: roundDay,
-    formatObjToURLParams: formatObjToURLParams
+    formatObjToURLParams: formatObjToURLParams,
+    nodeElements: nodeElements
 };

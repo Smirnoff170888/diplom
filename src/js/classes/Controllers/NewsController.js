@@ -1,14 +1,13 @@
+import Utils from '../../helpers/Utils.js';
+
 export default class NewsController {
-    constructor({ search, next, preloader, empty }, params, api) {
+    constructor(el, params, api) {
         this._api = api;
-        this._elNextForm = next;
-        this._elPreloadContainer =  preloader;
-        this._elSearchForm = search;
-        this._elNotFound = empty;
+        this._el = Utils.nodeElements(el);
         this._searchParams = params;
         this._newsItems = [];
-        this._elSearchForm.addEventListener('submit', this._searchFormHandler.bind(this));
-        this._elNextForm.addEventListener('submit', this._nextFormHander.bind(this));
+        this._el.searchForm.addEventListener('submit', this._searchFormHandler.bind(this));
+        this._el.nextForm.addEventListener('submit', this._nextFormHander.bind(this));
     }
 
     _searchFormHandler(event) {
@@ -71,12 +70,12 @@ export default class NewsController {
 
     redraw() {
         if (this._searchParams.totalResults === 0)
-            this._elNotFound.style.display = 'flex';
+            this._el.notFound.style.display = 'flex';
         if (this._searchParams.totalResults > this._newsItems.length)
-            this._elNextForm.style.display = 'block';
-        else this._elNextForm.style.display = 'none';
-        this._elPreloadContainer.style.display = 'none';
-        if (this._searchParams.q) this._elSearchForm['item'].value = this._searchParams.q;
+            this._el.nextForm.style.display = 'block';
+        else this._el.nextForm.style.display = 'none';
+        this._el.preloadContainer.style.display = 'none';
+        if (this._searchParams.q) this._el.searchForm['item'].value = this._searchParams.q;
     }
 
 }
