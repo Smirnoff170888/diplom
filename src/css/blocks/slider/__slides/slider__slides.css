@@ -1,11 +1,10 @@
 .slider__slides {
     margin: 0;
-    margin-top: 64px;
     display: flex;
     flex-direction: row;
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin-left: -365px;
-    width: 180%;
+    width: auto;
     flex-wrap: nowrap;
 }
 
@@ -17,15 +16,12 @@
 
 @media screen and (max-width: 1023px) {
     .slider__slides {
-        margin-top: 32px;
         margin-left: -12px;
     }
 }
 
 @media screen and (max-width: 424px) {
     .slider__slides {
-        margin-top: 16px;
         margin-left: -40px;
-        width: 180%;
     }
 }

@@ -13,10 +13,25 @@
 @import url("./__slides/slider__slides.css");
 @import url("./__arrows/slider__arrows.css");
 @import url("./__gradient/slider__gradient.css");
-@import url("./__button/slider__button.css");
+@import url("./__bullet/slider__bullet.css");
+@import url("./__bullet-active/slider__bullet-active.css");
 @import url("./__form/slider__form.css");
 
 .slider {
     width: 100%;
     margin: 0;
+    position: relative;
+    margin-top: 64px;
+}
+
+@media screen and (max-width: 1023px) {
+    .slider {
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .slider {
+        margin-top: 16px;
+    }
 }
