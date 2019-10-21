@@ -36,4 +36,3 @@ if (cachedData.data)
     newsController.addManual(new NewsView(cachedData.data[i], elNewsContainer));
   }
 newsController.redraw();
-    

@@ -57,7 +57,6 @@ export default class AnalyticsController {
             barEl.classList = 'tabel__set';
             barEl.style.width = `${this._byDay[i] / this._maxInDay * 100}%`;
             this.el.bars.append(barEl);
-            console.log(colEl, barEl);
         }
     }
 }
