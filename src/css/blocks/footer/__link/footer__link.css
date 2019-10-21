@@ -2,7 +2,7 @@
     font-size: 18px;
     line-height: 24px;
     font-weight: normal;
-    font-family: Source Sans Pro;
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
     font-style: normal;
     color: #1A1B22;
     text-decoration: none;
@@ -18,9 +18,16 @@
     color: black;
 }
 
+@media screen and (max-width: 760px) {
+    .footer__link {
+        word-wrap: break-word;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .footer__link {
         text-align: left;
         line-height: 24px;
+        word-wrap: break-word;
     }
 }

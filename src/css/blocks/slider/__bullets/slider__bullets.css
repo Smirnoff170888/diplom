@@ -1,15 +1,14 @@
 .slider__bullets {
     margin: 0 auto;
-    width: 4.4%;
+    width: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 48px;
 }
 
 @media screen and (max-width: 1023px) {
     .slider__bullets {
         margin-top: 32px;
-        width: 10.5%;
     }
 }
 
@@ -17,6 +16,5 @@
     .slider__bullets {
         margin-top: 0px;
         margin-bottom: 24px;
-        width: 15%;
     }
 }

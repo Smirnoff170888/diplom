@@ -1,0 +1,44 @@
+.commits__link {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #1A1B22;
+    text-align: right;
+    padding-top: 14px;
+}
+
+.commits__link:hover {
+    color: #696969;
+}
+
+.commits__link:active {
+    color: black;
+}
+
+@media screen and (max-width: 1279px) {
+    .commits__link {
+        padding-top: 16px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .commits__link {
+        padding-top: 8px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .commits__link {
+        text-align: left;
+        padding-top: 16px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .commits__link {
+        display: none;
+    }
+}
