@@ -2,7 +2,6 @@ import Utils from '../helpers/Utils.js';
 
 export default class CommitView {
     constructor(data, container) {
-        console.log(data);
         this._data = data;
         this._elem = this.createDom();
         this._container = container;
@@ -23,7 +22,7 @@ export default class CommitView {
                     <p class="slider__text">${this._data.commit.message}</p>
                 </div>`;
         const elem = document.createElement('li');
-        elem.classList = 'slider__container';
+        elem.classList = 'slider__container swiper-slide';
         elem.insertAdjacentHTML('beforeend', template);
         return elem;
     }
