@@ -1,7 +1,7 @@
-import NewsApi from './classes/NewsApi.js';
-import NewsView from './classes/NewsView.js';
-import NewsController from './classes/NewsController.js';
-import StorageController from './classes/StorageController.js';
+import NewsApi from './classes/Api/NewsApi.js';
+import NewsView from './classes/Views/NewsView.js';
+import NewsController from './classes/Controlles/NewsController.js';
+import StorageController from './classes/Controlles/StorageController.js';
 
 const elNewsContainer = document.querySelector('.news-cards__item');
 const elSearchForm = document.querySelector('.search__search-field');

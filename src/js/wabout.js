@@ -1,5 +1,5 @@
-import GhApi from './classes/GhApi.js';
-import CommitView from './classes/CommitView.js';
+import GhApi from './classes/Api/GhApi.js';
+import CommitView from './classes/Views/CommitView.js';
 import Swiper from 'swiper';
 
 document.addEventListener('DOMContentLoaded', async () => {

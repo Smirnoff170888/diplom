@@ -1,4 +1,4 @@
-import Utils from '../helpers/Utils.js';
+import Utils from '../../helpers/Utils.js';
 
 export default class CommitView {
     constructor(data, container) {
