@@ -1,5 +1,5 @@
 import NewsApi from './classes/Api/NewsApi.js';
-import NewsView from './classes/Views/NewsView.js';
+import NewsCardComponent from './classes/Components/NewsCardComponent.js';
 import NewsController from './classes/Controlles/NewsController.js';
 import StorageController from './classes/Controlles/StorageController.js';
 
@@ -24,7 +24,7 @@ const newsController = new NewsController({
 
 newsController.onNewsFound = (news, params) => {
   storageController.saveData(news, params);
-  return new NewsView(news, elNewsContainer);
+  return new NewsCardComponent(news, elNewsContainer);
 };
 
 newsController.onResetSearch = () => {
@@ -33,6 +33,6 @@ newsController.onResetSearch = () => {
 
 if (cachedData.data)
   for (let i in cachedData.data) {
-    newsController.addManual(new NewsView(cachedData.data[i], elNewsContainer));
+    newsController.addManual(new NewsCardComponent(cachedData.data[i], elNewsContainer));
   }
 newsController.redraw();

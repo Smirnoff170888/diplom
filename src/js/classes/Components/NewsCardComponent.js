@@ -1,13 +1,7 @@
+import AbstractComponent from './AbstractComponent.js';
 import Utils from '../../helpers/Utils.js';
 
-export default class CommitView {
-    constructor(data, container) {
-        this._data = data;
-        this._elem = this.createDom();
-        this._container = container;
-        this.render();
-    }
-
+export default class NewsCardComponent extends AbstractComponent {
     createDom() {
         const template = `
             <div class="news-cards__wrapper">
@@ -21,13 +15,5 @@ export default class CommitView {
         elem.classList = 'news-cards__card';
         elem.insertAdjacentHTML('beforeend', template);
         return elem;
-    }
-
-    render() {
-        this._container.appendChild(this._elem);
-    }
-
-    destroy() {
-        this._elem.remove();
     }
 }

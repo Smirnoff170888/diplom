@@ -1,11 +1,11 @@
 import GhApi from './classes/Api/GhApi.js';
-import CommitView from './classes/Views/CommitView.js';
+import CommitCardComponent from './classes/Components/CommitCardComponent.js';
 import Swiper from 'swiper';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const api = new GhApi({user: 'smirnoff170888', repo: 'diplom'});
     const commitContainer = document.querySelector('.slider__slides');
-    await api.getCommits(data => data.forEach(element => new CommitView(element, commitContainer)));
+    await api.getCommits(data => data.forEach(element => new CommitCardComponent(element, commitContainer)));
     new Swiper('.slider', {
         loop: true,
         freeMode: true,

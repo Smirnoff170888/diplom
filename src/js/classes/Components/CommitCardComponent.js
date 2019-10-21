@@ -1,13 +1,7 @@
+import AbstractComponent from './AbstractComponent.js';
 import Utils from '../../helpers/Utils.js';
 
-export default class CommitView {
-    constructor(data, container) {
-        this._data = data;
-        this._elem = this.createDom();
-        this._container = container;
-        this.render();
-    }
-
+export default class CommitCardComponent extends AbstractComponent {
     createDom() {
         const template = `
                 <div class="slider__card">
@@ -25,9 +19,5 @@ export default class CommitView {
         elem.classList = 'slider__container swiper-slide';
         elem.insertAdjacentHTML('beforeend', template);
         return elem;
-    }
-
-    render() {
-        this._container.appendChild(this._elem);
     }
 }
