@@ -22,4 +22,17 @@
     width: 100%;
     background-color: #F5F6F7;
     margin: 0;
+    padding-bottom: 80px;
+}
+
+@media screen and (max-width: 1023px) {
+    .news-cards {
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .news-cards {
+        padding-bottom: 44px;
+    }
 }

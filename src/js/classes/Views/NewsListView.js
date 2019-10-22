@@ -25,7 +25,35 @@ export default class NewsListView {
         this._onLoadMore = cb;
     }
 
+    _beforeRenderNext() {
+        this._el.globalContainer.style.display = 'block';
+        this._el.loadNextContainer.style.display = 'none';
+    }
+
+    _afterRenderNext() {
+        if (this._totalNews() === 0) {
+            this._el.notFoundContainer.style.display = 'flex';
+        } else if (this._el.notFoundContainer.style.display != 'none') {
+            this._el.notFoundContainer.style.display = 'none';
+        }
+    
+        if (typeof(this._totalNews()) === 'undefined')
+            this._el.globalContainer.style.display = 'none';
+        else if (this._el.globalContainer.style.display == 'none')
+            this._el.globalContainer.style.display = 'block';
+
+        if (this._renderedNews > 0 &&  this._el.newsResultsContainer.style.display == 'none')
+            this._el.newsResultsContainer.style.display = 'flex';
+ 
+        if (this._renderedNews == 0 && this._el.newsResultsContainer.style.display != 'none')
+            this._el.newsResultsContainer.style.display = 'none';
+
+        if (this._renderedNews < this._totalNews())
+            this._el.loadNextContainer.style.display = 'block';
+    }
+
     async renderNext() {
+        this._beforeRenderNext();
         const needToAchive = Math.min(this._renderedNews + 3, this._totalNews());
 
         if (needToAchive > this._data.length && this._data.length < this._totalNews())
@@ -36,15 +64,7 @@ export default class NewsListView {
             this._newsCards.push(this._cardGenerator(this._data[i], this._el.newsContainer));
         }
 
-        if (this._totalNews() === 0)
-            this._el.notFoundContainer.style.display = 'flex';
-        else
-            this._el.notFoundContainer.style.display = 'none';
-
-        if (this._renderedNews >= this._totalNews() || typeof(this._totalNews()) === 'undefined')
-            this._el.loadNextContainer.style.display = 'none';
-        else
-            this._el.loadNextContainer.style.display = 'block';
+        this._afterRenderNext();
     }
 
     addNews(data) {
@@ -56,5 +76,7 @@ export default class NewsListView {
         this._data = [];
         if (this._newsCards) this._newsCards.forEach((card) => card.destroy());
         this._newsCards = [];
+        this._el.newsResultsContainer.style.display = 'none';
+        this._el.notFoundContainer.style.display = 'none';
     }
 }
