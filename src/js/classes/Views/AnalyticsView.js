@@ -1,6 +1,6 @@
 import Utils from '../../helpers/Utils.js';
 
-export default class AnalyticsController {
+export default class AnalyticsView {
     constructor(data, elems) {
         this._data = data;
         this._byDay = {};

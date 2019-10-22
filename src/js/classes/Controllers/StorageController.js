@@ -29,7 +29,6 @@ export default class StorageController {
     }
 
     saveData(data, params) {
-        console.log(this._storId, data, params);
         this._cache.data.push(data);
         this._cache.params = params;
         this._cache.updated = Date.now();

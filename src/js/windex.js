@@ -1,9 +1,14 @@
 import NewsApi from './classes/Api/NewsApi.js';
 import NewsCardComponent from './classes/Components/NewsCardComponent.js';
-import NewsController from './classes/Controllers/NewsController.js';
+
+import SearchNewsController from './classes/Controllers/SearchNewsController.js';
 import StorageController from './classes/Controllers/StorageController.js';
 
-const elNewsContainer = document.querySelector('.news-cards__item');
+import NewsListView from './classes/Views/NewsListView.js';
+import SearchFormView from './classes/views/SearchFormView.js';
+
+
+const elPreloadContainer = document.querySelector('.news-cards__search');
 
 const newsAPI = new NewsApi('94ad67b6000f42d886d0825e6b9cd7c0');
 const storageController = new StorageController();
@@ -11,24 +16,37 @@ const cachedData = storageController.getData();
 let newsParams = cachedData.params;
 if (!newsParams) newsParams = { newsPerPage: 20 };
 
-const newsController = new NewsController({
-        searchForm: '.search__search-field',
-        nextForm: '.news-cards__form',
-        preloadContainer: '.news-cards__search',
-        notFound: '.news-cards__not-found'
-        }, newsParams, newsAPI);
+const newsListView = new NewsListView(cachedData.data, {
+  newsContainer: '.news-cards__item',
+  loadNextContainer: '.news-cards__form',
+  notFoundContainer: '.news-cards__not-found'
+});
 
-newsController.onNewsFound = (news, params) => {
+const searchFormView = new SearchFormView(cachedData.params, {
+  searchForm: '.search__search-field'
+});
+
+const searchNewsController = new SearchNewsController(newsParams, newsAPI);
+
+searchNewsController.onNewsFound = (news, params) => {
   storageController.saveData(news, params);
-  return new NewsCardComponent(news, elNewsContainer);
+  newsListView.addNews(news);
 };
 
-newsController.onResetSearch = () => {
+searchNewsController.onQueryStart = () => elPreloadContainer.style.display = 'flex';
+searchNewsController.onQueryEnd = () => elPreloadContainer.style.display = 'none';
+
+searchFormView.onSearch = async (query) => {
   storageController.initCache();
+  newsListView.clear();
+  await searchNewsController.newSearch(query);
+  newsListView.renderNext();
 };
 
-if (cachedData.data)
-  for (let i in cachedData.data) {
-    newsController.addManual(new NewsCardComponent(cachedData.data[i], elNewsContainer));
-  }
-newsController.redraw();
+newsListView.onLoadMore = async () => {
+  await searchNewsController.searchNext();
+};
+
+newsListView.renderer = (data, el) => new NewsCardComponent(data, el);
+newsListView.totalNews = () => searchNewsController.totalResults;
+newsListView.renderNext();

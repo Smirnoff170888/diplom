@@ -1,8 +1,8 @@
-import AnalyticsController from './classes/Controllers/AnalyticsController.js';
+import AnalyticsView from './classes/Views/AnalyticsView.js';
 import StorageController from './classes/Controllers/StorageController.js';
 
 const storageController = new StorageController();
-const analyticsController = new AnalyticsController(storageController.getData(), {
+const analyticsView = new AnalyticsView(storageController.getData(), {
     query: '#queryText',
     total: '#findTotal',
     headers: '#findHeaders',
@@ -10,4 +10,4 @@ const analyticsController = new AnalyticsController(storageController.getData(),
     bars: '.tabel__row',
     ranges: '.tabel__range'
 });
-analyticsController.render();
+analyticsView.render();
