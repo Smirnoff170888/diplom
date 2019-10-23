@@ -22,8 +22,14 @@ searchNewsController.onNewsFound = (news, params) => {
   newsCards.addNews(news);
 };
 
-searchNewsController.onQueryStart = () =>newsCards.showPreloader();
-searchNewsController.onQueryEnd = () => newsCards.hidePreloader();
+searchNewsController.onQueryStart = () => {
+  newsCards.showPreloader();
+  search.disable()
+}
+searchNewsController.onQueryEnd = () => {
+  newsCards.hidePreloader();
+  search.enable();
+}
 
 search.onSearch = async (query) => {
   storageController.initCache();
