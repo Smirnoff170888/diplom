@@ -1,0 +1,16 @@
+.news-cards__form {
+    margin: 0 auto;
+    margin-top: 64px;
+}
+
+@media screen and (max-width: 1023px) {
+    .news-cards__form {
+        margin-top: 22px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .news-cards__form {
+        margin-top: 12px;
+    }
+}

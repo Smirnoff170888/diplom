@@ -1,39 +1,38 @@
 import NewsApi from './classes/Api/NewsApi.js';
-import NewsView from './classes/Views/NewsView.js';
-import NewsController from './classes/Controlles/NewsController.js';
-import StorageController from './classes/Controlles/StorageController.js';
+import SearchNewsController from './classes/Controllers/SearchNewsController.js';
+import StorageController from './classes/Controllers/StorageController.js';
 
-const elNewsContainer = document.querySelector('.news-cards__item');
-const elSearchForm = document.querySelector('.search__search-field');
-const elNextForm = document.querySelector('.news-cards__form');
-const elPreloadContainer = document.querySelector('.news-cards__search');
-const elNotFound = document.querySelector('.news-cards__not-found');
+import NewsCards from '../blocks/news-cards/NewsCards.js';
+import Search from '../blocks/search/Search.js';
+import Error from '../blocks/error/Error.js';
 
-const newsAPI = new NewsApi('94ad67b6000f42d886d0825e6b9cd7c0');
+const newsAPI = new NewsApi(config.api.news.token);
 const storageController = new StorageController();
 const cachedData = storageController.getData();
-let newsParams = cachedData.params;
-if (!newsParams) newsParams = { newsPerPage: 20 };
+const searchNewsController = new SearchNewsController(cachedData.params, newsAPI);
 
-const newsController = new NewsController({
-        search: elSearchForm,
-        next: elNextForm,
-        preloader: elPreloadContainer,
-        empty: elNotFound
-        }, newsParams, newsAPI);
+const newsCards = new NewsCards('.news-cards', cachedData.data);
+const search = new Search('.search__search-field', cachedData.params);
+const errorHandler = new Error('.error');
 
-newsController.onNewsFound = (news, params) => {
+newsAPI.onError = (text) => errorHandler.error(text);
+
+searchNewsController.onNewsFound = (news, params) => {
   storageController.saveData(news, params);
-  return new NewsView(news, elNewsContainer);
+  newsCards.addNews(news);
 };
 
-newsController.onResetSearch = () => {
+searchNewsController.onQueryStart = () =>newsCards.showPreloader();
+searchNewsController.onQueryEnd = () => newsCards.hidePreloader();
+
+search.onSearch = async (query) => {
   storageController.initCache();
+  newsCards.clear();
+  await searchNewsController.newSearch(query);
+  newsCards.renderNext();
 };
 
-if (cachedData.data)
-  for (let i in cachedData.data) {
-    newsController.addManual(new NewsView(cachedData.data[i], elNewsContainer));
-  }
-newsController.redraw();
-    
+newsCards.onLoadMore = async () => await searchNewsController.searchNext();
+newsCards.totalNews = () => searchNewsController.totalResults;
+
+newsCards.render();
