@@ -1,7 +1,7 @@
-import AbstractComponent from './AbstractComponent.js';
-import Utils from '../../helpers/Utils.js';
+import DynamicComponent from '../../../modules/DynamicComponent.js';
+import Utils from '../../../modules/helpers/Utils.js';
 
-export default class CommitCardComponent extends AbstractComponent {
+export default class Card extends DynamicComponent {
     createDom() {
         const template = `
                 <div class="slider__card">

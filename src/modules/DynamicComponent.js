@@ -1,9 +1,8 @@
-export default class AbstractComponent {
+export default class DynamicComponent {
     constructor(data, container) {
         this._data = data;
         this._elem = this.createDom();
         this._container = container;
-        this.render();
     }
 
     //abstract createDom() {}

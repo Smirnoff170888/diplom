@@ -13,6 +13,9 @@
 !/src/**/
 !/src/css/**/*.css
 !/src/js/**/*.js
+!/src/blocks/**/*.css
+!/src/blocks/**/*.js
+!/src/modules/**/*.js
 !/src/*.html
 !/src/vendor/**/*
 !/src/image/*.png

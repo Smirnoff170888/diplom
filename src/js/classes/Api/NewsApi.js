@@ -1,5 +1,5 @@
 import Api from './Api.js';
-import Utils from '../../helpers/Utils.js';
+import Utils from '../../../modules/helpers/Utils.js';
 
 export default class NewsApi extends Api {
     constructor(token) {

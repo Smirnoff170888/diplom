@@ -52,18 +52,34 @@ function formatObjToURLParams(obj) {
     return ret;
 }
 
-function nodeElements(obj) {
+function nodeElements(obj, parent = document) {
     const ret = {};
+    if (typeof(obj) == 'string') {
+        const nodes = parent.querySelectorAll(obj);
+        return (nodes.length && nodes.length == 1) ? nodes[0] : nodes;
+    }
+       
+
+    if (typeof(obj) === 'object' && obj.nodeType)
+        return obj;
+        
     for (let k in obj) {
         if (typeof(obj[k]) === 'string') {
-            const nodes = document.querySelectorAll(obj[k]);
+            const nodes = parent.querySelectorAll(obj[k]);
             ret[k] = (nodes.length && nodes.length == 1) ? nodes[0] : nodes;
         } else if (typeof(obj[k]) === 'object' && !obj[k].nodeType)
-            ret[k] = nodeElements(obj[k]);
+            ret[k] = nodeElements(obj[k], parent);
         else
             ret[k] = obj[k];
     }
     return ret;
+}
+
+function makeContextFree(obj) {
+    for (let k  in obj) {
+        if (typeof(obj[k]) == 'function')
+            obj[k] = obj[k].bind(obj);
+    }
 }
 
 export default {
@@ -71,5 +87,6 @@ export default {
     formateDateWeek: formatDateWeek,
     roundDay: roundDay,
     formatObjToURLParams: formatObjToURLParams,
-    nodeElements: nodeElements
+    nodeElements: nodeElements,
+    makeContextFree: makeContextFree
 };

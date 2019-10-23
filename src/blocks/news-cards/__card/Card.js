@@ -1,4 +1,4 @@
-import DynamicComponent from '../../../modules/DynamicComponent';
+import DynamicComponent from '../../../modules/DynamicComponent.js';
 import Utils from '../../../modules/helpers/Utils.js';
 
 export default class NewsCardComponent extends DynamicComponent {
