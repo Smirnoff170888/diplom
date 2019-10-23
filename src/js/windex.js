@@ -18,24 +18,24 @@ const errorHandler = new Error('.error');
 newsAPI.onError = (text) => errorHandler.error(text);
 
 searchNewsController.onNewsFound = (news, params) => {
-  storageController.saveData(news, params);
-  newsCards.addNews(news);
+    storageController.saveData(news, params);
+    newsCards.addNews(news);
 };
 
 searchNewsController.onQueryStart = () => {
-  newsCards.showPreloader();
-  search.disable()
-}
+    newsCards.showPreloader();
+    search.disable();
+};
 searchNewsController.onQueryEnd = () => {
-  newsCards.hidePreloader();
-  search.enable();
-}
+    newsCards.hidePreloader();
+    search.enable();
+};
 
 search.onSearch = async (query) => {
-  storageController.initCache();
-  newsCards.clear();
-  await searchNewsController.newSearch(query);
-  newsCards.renderNext();
+    storageController.initCache();
+    newsCards.clear();
+    await searchNewsController.newSearch(query);
+    newsCards.renderNext();
 };
 
 newsCards.onLoadMore = async () => await searchNewsController.searchNext();

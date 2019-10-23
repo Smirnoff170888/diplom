@@ -1,5 +1,5 @@
 import FixedComponent from '../../../modules/FixedComponent.js';
-import Utils from '../../../modules/helpers/Utils.js'
+import Utils from '../../../modules/helpers/Utils.js';
 
 export default class Container extends FixedComponent {
     constructor(elem) {

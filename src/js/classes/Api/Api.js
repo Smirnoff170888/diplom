@@ -21,12 +21,12 @@ export default class Api {
             method: method,
             headers: this._headers,
             body: JSON.stringify(data)
-        }
+        };
 
         try {
-            let response = await fetch(url, options);
+            const response = await fetch(url, options);
             if (!response.ok) {
-                this.error(`AJAX error, url: ${url}, status: ${response.status}`, response)
+                this.error(`AJAX error, url: ${url}, status: ${response.status}`, response);
                 return null;
             }
             return await response.json();

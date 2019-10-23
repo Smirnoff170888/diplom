@@ -5,11 +5,11 @@ export default class Search extends FixedComponent {
         super(elem, data);
         this._errorsSet = new Set();
         this._inputHandlers = new Array();
-        this.validate = () => this._inputHandlers.forEach((f) => f());
+        this.validate = () => this._inputHandlers.forEach((handler) => handler());
         this.reset = () => {
             this._container.reset();
             this._submit.disabled = false;
-        }
+        };
 
         this._container.forEach((elem) => {
             if (elem.tagName == 'INPUT') this._initInputHandler(elem);
@@ -21,12 +21,12 @@ export default class Search extends FixedComponent {
     }
 
     _initInputHandler(elem) {
-        const f = () => {
-            this._inputHandler(elem)
+        const validateInput = () => {
+            this._inputHandler(elem);
             this._submit.disabled = this._errorsSet.size > 0;
         };
-        elem.addEventListener('input', f);
-        this._inputHandlers.push(f);
+        elem.addEventListener('input', validateInput);
+        this._inputHandlers.push(validateInput);
     }
 
     _submitHander(event) {

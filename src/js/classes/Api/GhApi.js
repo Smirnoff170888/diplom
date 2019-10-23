@@ -8,8 +8,8 @@ export default class GhApi extends Api {
     }
 
     async getCommits(cb) {
-        let rdata = await this._query(`repos/${this._user}/${this._repo}/commits`, 'GET');
-        if (cb && rdata) cb(rdata);
-        return rdata;
+        const commitsData = await this._query(`repos/${this._user}/${this._repo}/commits`, 'GET');
+        if (cb && commitsData) cb(commitsData);
+        return commitsData;
     }
 }
