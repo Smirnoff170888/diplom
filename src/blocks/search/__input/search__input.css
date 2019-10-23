@@ -1,3 +1,5 @@
+@import url("./_error/search__input_error.css");
+
 .search__input {
     position: relative;
     width: 100%;

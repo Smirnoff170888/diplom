@@ -14,9 +14,9 @@ export default class AnalyticsView {
             this._tabel.render();    
         } else {
             this._info.hide();
-            this._tabel.hide()
+            this._tabel.hide();
+            this._onError('Ошибка загрузка кэша');
         }
-        this._onError('Ошибка загрузка кэша');
     }
 
     set onError(cb) {

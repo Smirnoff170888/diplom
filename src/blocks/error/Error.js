@@ -13,6 +13,7 @@ export default class Error extends FixedComponent {
         this._errCounter++;
         const err = new Err({text: text}, this._container, {
             timeout: () => {
+                err.destroy();
                 this._errCounter--;
                 if (!this._errCounter) this.hide();
             }
