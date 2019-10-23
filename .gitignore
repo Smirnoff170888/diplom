@@ -8,6 +8,7 @@
 !webpack.config.js
 !babel.config.js
 !postcss.config.js
+!config.js
 
 !/src/
 !/src/**/

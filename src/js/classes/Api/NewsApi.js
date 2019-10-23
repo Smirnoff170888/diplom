@@ -3,7 +3,7 @@ import Utils from '../../../modules/helpers/Utils.js';
 
 export default class NewsApi extends Api {
     constructor(token) {
-        super('https://newsapi.org/v2', { 'Authorization' : token });
+        super(config.api.news.url, { 'Authorization' : config.api.news.token });
     }
 
     async searchNews(data, cb) {

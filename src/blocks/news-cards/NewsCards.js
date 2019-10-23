@@ -45,7 +45,7 @@ export default class NewsCards extends FixedComponent {
 
     async renderNext() {
         this._beforeRenderNext();
-        const needToAchive = Math.min(this._renderedNews + 3, this._totalNews());
+        const needToAchive = Math.min(this._renderedNews + config.news.countPerShow, this._totalNews());
 
         if (needToAchive > this._data.length && this._data.length < this._totalNews())
             await this._onLoadMore();

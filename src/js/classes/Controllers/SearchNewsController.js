@@ -6,7 +6,7 @@ export default class SearchNewsController {
 
     async newSearch(query) {
         this._searchParams.q = query;
-        this._searchParams.from = Date.now() - 60*60*24*7*1000;
+        this._searchParams.from = Date.now() - config.search.msBefore;
         this._searchParams.to = Date.now();
         this._searchParams.totalResults = 0;
         this._searchParams.currentPage = 0;
@@ -19,7 +19,7 @@ export default class SearchNewsController {
             q: encodeURIComponent(this._searchParams.q),
             from: new Date(this._searchParams.from).toISOString(),
             to: new Date(this._searchParams.to).toISOString(),
-            pageSize: this._searchParams.newsPerPage,
+            pageSize: config.search.pageSize,
             page: this._searchParams.currentPage + 1
         });
 

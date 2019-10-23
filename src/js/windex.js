@@ -5,12 +5,10 @@ import StorageController from './classes/Controllers/StorageController.js';
 import NewsCards from '../blocks/news-cards/NewsCards.js';
 import Search from '../blocks/search/Search.js';
 
-const newsAPI = new NewsApi('94ad67b6000f42d886d0825e6b9cd7c0');
+const newsAPI = new NewsApi(config.api.news.token);
 const storageController = new StorageController();
 const cachedData = storageController.getData();
-let newsParams = cachedData.params;
-if (!newsParams) newsParams = { newsPerPage: 20 };
-const searchNewsController = new SearchNewsController(newsParams, newsAPI);
+const searchNewsController = new SearchNewsController(cachedData.params, newsAPI);
 
 const newsCards = new NewsCards('.news-cards', cachedData.data);
 const search = new Search('.search__search-field', cachedData.params);
