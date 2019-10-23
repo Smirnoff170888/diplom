@@ -38,6 +38,14 @@ export default class Search extends FixedComponent {
         this._onSearch = cb;
     }
 
+    enable() {
+        this._container.forEach((elem) => elem.disabled = false);
+    }
+
+    disable() {
+        this._container.forEach((elem) => elem.disabled = true);
+    }
+
     _inputHandler(elem) {
         const minLength = elem.getAttribute('minlength');
         const maxLength = elem.getAttribute('maxlength');
