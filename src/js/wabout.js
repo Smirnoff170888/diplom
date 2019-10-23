@@ -1,24 +1,14 @@
 import GhApi from './classes/Api/GhApi.js';
-import CommitView from './classes/Views/CommitView.js';
-import Swiper from 'swiper';
+import Slider from '../blocks/slider/Slider.js';
+import Commits from '../blocks/commits/Commits.js';
+import Error from '../blocks/error/Error.js';
 
-document.addEventListener('DOMContentLoaded', async () => {
-    const api = new GhApi({user: 'smirnoff170888', repo: 'diplom'});
-    const commitContainer = document.querySelector('.slider__slides');
-    await api.getCommits(data => data.forEach(element => new CommitView(element, commitContainer)));
-    new Swiper('.slider', {
-        loop: true,
-        freeMode: true,
-        slidesPerView: 'auto',
-        navigation: {
-            nextEl: '.slider__arrow_right',
-            prevEl: '.slider__arrow_left'    
-        },
-        pagination: {
-            el: '.slider__bullets',
-            clickable: true,
-            bulletClass: 'slider__bullet',
-            bulletActiveClass: 'slider__bullet-active',
-        }
-    });
-});
+const api = new GhApi(config.api.github);
+const errorHandler = new Error('.error');
+const commits = new Commits('.commits');
+
+api.onError = (text) => {
+    errorHandler.error(text);
+    commits.hide();
+};
+api.getCommits(commits => new Slider('.slider', commits).render());

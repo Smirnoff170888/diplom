@@ -4,6 +4,17 @@ export default class Api {
         this._headers = headers;
     }
 
+    set onError(cb) {
+        this._onError = cb;
+    }
+
+    _error(text, obj) {
+        if (this._onError)
+            this._onError(text);
+        else
+            console.log(text, obj);
+    }
+
     async _query(path, method, data) {
         const url = `${this._baseUrl}/${path}`;
         const options = {
@@ -15,12 +26,12 @@ export default class Api {
         try {
             let response = await fetch(url, options);
             if (!response.ok) {
-                console.log(`AJAX error, url: ${url}, status: ${response.status}`, response);
+                this.error(`AJAX error, url: ${url}, status: ${response.status}`, response)
                 return null;
             }
             return await response.json();
         } catch (error) {
-            console.log(`AJAX general error, url: ${url}`, error);
+            this._error(`AJAX general error, url: ${url}`, error);
             return null;
         }
     }

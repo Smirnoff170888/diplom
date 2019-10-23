@@ -26,6 +26,9 @@
             </nav>
         </header>
 
+        <div class="error">
+        </div>
+
         <section class="search">
             <h1 class="search__title">Что в мире творится?</h1>
             <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
@@ -38,10 +41,6 @@
         <main class="content">
 
             <section class="news-cards">
-                <div class="news-cards__search">
-                    <i class="news-cards__circle-preloader"></i>
-                    <p class="news-cards__text">Идет поиск новостей...</p>
-                </div>
                 <div class="news-cards__not-found">
                     <img src="<%=require('./image/not-found_v1.png') %>" alt="Грустный смайлик" class="news-cards__icon">
                     <h3 class="news-cards__subtitle">Ничего не найдено</h3>
@@ -57,6 +56,10 @@
                     <form class="news-cards__form">
                         <button class="button content-button" name="show" type="submit">Показать еще</button>
                     </form>
+                </div>
+                <div class="news-cards__search">
+                    <i class="news-cards__circle-preloader"></i>
+                    <p class="news-cards__text">Идет поиск новостей...</p>
                 </div>
             </section>
 

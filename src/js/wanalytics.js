@@ -1,13 +1,13 @@
-import AnalyticsController from './classes/Controlles/AnalyticsController.js';
-import StorageController from './classes/Controlles/StorageController.js';
+import AnalyticsView from './classes/Views/AnalyticsView.js';
+import StorageController from './classes/Controllers/StorageController.js';
+import Error from '../blocks/error/Error.js';
 
 const storageController = new StorageController();
-const analyticsController = new AnalyticsController(storageController.getData(), {
-    query: document.querySelector('#queryText'),
-    total: document.querySelector('#findTotal'),
-    headers: document.querySelector('#findHeaders'),
-    days: document.querySelector('.tabel__col'),
-    bars: document.querySelector('.tabel__row'),
-    ranges: document.querySelectorAll('.tabel__range')
+const analyticsView = new AnalyticsView(storageController.getData(), {
+    info: '.info',
+    tabel: '.tabel'
 });
-analyticsController.render();
+const errorHandler = new Error('.error');
+
+analyticsView.onError = (text) => errorHandler.error(text);
+analyticsView.render();

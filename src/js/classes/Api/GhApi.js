@@ -2,7 +2,7 @@ import Api from './Api.js';
 
 export default class GhApi extends Api {
     constructor ({user, repo}) {
-        super('https://api.github.com', {'Content-Type': 'application/json'});
+        super(config.api.github.url, {'Content-Type': 'application/json'});
         this._user = user;
         this._repo = repo;
     }
