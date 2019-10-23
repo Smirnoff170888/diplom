@@ -23,12 +23,14 @@ export default class SearchNewsController {
             page: this._searchParams.currentPage + 1
         });
 
-        this._searchParams.totalResults = news.totalResults;
-        this._searchParams.currentPage++;
-
-        if (this._searchParams.totalResults && news.articles)
-            for (let i in news.articles)
-                this._onNewsFound(news.articles[i], this._searchParams);
+        if (news) {
+            this._searchParams.totalResults = news.totalResults;
+            this._searchParams.currentPage++;
+    
+            if (this._searchParams.totalResults && news.articles)
+                for (let i in news.articles)
+                    this._onNewsFound(news.articles[i], this._searchParams);    
+        }
         this._onQueryEnd();
     }
 

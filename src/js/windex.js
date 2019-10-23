@@ -4,6 +4,7 @@ import StorageController from './classes/Controllers/StorageController.js';
 
 import NewsCards from '../blocks/news-cards/NewsCards.js';
 import Search from '../blocks/search/Search.js';
+import Error from '../blocks/error/Error.js';
 
 const newsAPI = new NewsApi(config.api.news.token);
 const storageController = new StorageController();
@@ -12,6 +13,9 @@ const searchNewsController = new SearchNewsController(cachedData.params, newsAPI
 
 const newsCards = new NewsCards('.news-cards', cachedData.data);
 const search = new Search('.search__search-field', cachedData.params);
+const errorHandler = new Error('.error');
+
+newsAPI.onError = (text) => errorHandler.error(text);
 
 searchNewsController.onNewsFound = (news, params) => {
   storageController.saveData(news, params);
