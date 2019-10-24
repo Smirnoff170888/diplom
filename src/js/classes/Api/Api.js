@@ -26,12 +26,12 @@ export default class Api {
         try {
             const response = await fetch(url, options);
             if (!response.ok) {
-                this.error(`AJAX error, url: ${url}, status: ${response.status}`, response);
+                this.error(`При запросе ${url}, сервер вернул ошибку: ${response.status}`, response);
                 return null;
             }
             return await response.json();
         } catch (error) {
-            this._error(`AJAX general error, url: ${url}`, error);
+            this._error(`Произошла ошибка запроса к серверу по адресу: ${url}`, error);
             return null;
         }
     }
