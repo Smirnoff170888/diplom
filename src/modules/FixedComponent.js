@@ -2,26 +2,37 @@ import Utils from './helpers/Utils.js';
 
 export default class FixedComponent {
     constructor(elem, data = {}, events = {}) {
-        this._container = Utils.nodeElements(elem);
-        this._data = data;
-        this._events = events;
-        this._el = {};
-        Utils.makeContextFree(this);
+        this._fContainer = Utils.nodeElements(elem);
+        this._fData = data;
+        this._fEvents = events;
+        this._fEl = {};
+        //Utils.makeContextFree(this);
     }
 
-    getContainer() {
-        return this._container;
+    get _container() { //protected
+        return this._fContainer;
+    }
+
+    get _data() { //protected
+        return this._fData;
+    }
+
+    get _events() { //protected
+        return this._fEvents;
+    }
+
+    get _el() { //protected
+        return this._fEl;
     }
 
     hide() {
-        if (this._container.style.display != 'none')
-            this._container.style.display = 'none';
+        if (!this._container.classList.contains('hide'))
+            this._container.classList.add('hide');
     }
 
     show() {
-        const displayType = (this._displayType) ? this._displayType : 'block';
-        if (this._container.style.display != displayType)
-            this._container.style.display = displayType;
+        if (this._container.classList.contains('hide'))
+            this._container.classList.remove('hide');
     }
 
     //abstract render()

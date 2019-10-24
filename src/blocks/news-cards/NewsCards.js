@@ -73,7 +73,7 @@ export default class NewsCards extends FixedComponent {
 
     clear() {
         this._renderedNews = 0;
-        this._data = [];
+        this._data.length = 0;
         this._cardsContainer.clear();
         this._notFound.hide();
     }

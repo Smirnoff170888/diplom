@@ -6,4 +6,5 @@
 @import url("../blocks/info/info.css");
 @import url("../blocks/tabel/tabel.css");
 @import url("../blocks/error/error.css");
+@import url("../css/mixins/hide.css");
 @import url("../vendor/font.css");

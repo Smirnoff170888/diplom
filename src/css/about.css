@@ -11,4 +11,5 @@
 @import url("../blocks/body/body.css");
 @import url("../blocks/content-button/content-button.css");
 @import url("../blocks/error/error.css");
+@import url("../css/mixins/hide.css");
 @import url("../vendor/font.css");

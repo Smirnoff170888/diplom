@@ -3,6 +3,7 @@
 @import url("./__search-field/search__search-field.css");
 @import url("./__text/search__text.css");
 @import url("./__title/search__title.css");
+@import url("./__error/search__error.css");
 
 .search {
     display: flex;

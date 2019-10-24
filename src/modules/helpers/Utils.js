@@ -44,42 +44,34 @@ function roundDay(iDate) {
 }
 
 function formatObjToURLParams(obj) {
-    let ret = '';
-    for (let k in obj) {
-        ret += ret ? '&' : '?';
-        ret += `${k}=${(obj[k])}`;
+    let paramsPartURI = '';
+    for (let objKey in obj) {
+        paramsPartURI += paramsPartURI ? '&' : '?';
+        paramsPartURI += `${objKey}=${(obj[objKey])}`;
     }
-    return ret;
+    return paramsPartURI;
 }
 
-function nodeElements(obj, parent = document) {
-    const ret = {};
-    if (typeof(obj) == 'string') {
-        const nodes = parent.querySelectorAll(obj);
+function nodeElements(processingData, parent = document) {
+    const nodeElems = {};
+    if (typeof(processingData) == 'string') {
+        const nodes = parent.querySelectorAll(processingData);
         return (nodes.length && nodes.length == 1) ? nodes[0] : nodes;
     }
        
-
-    if (typeof(obj) === 'object' && obj.nodeType)
-        return obj;
+    if (typeof(processingData) === 'object' && processingData.nodeType)
+        return processingData;
         
-    for (let k in obj) {
-        if (typeof(obj[k]) === 'string') {
-            const nodes = parent.querySelectorAll(obj[k]);
-            ret[k] = (nodes.length && nodes.length == 1) ? nodes[0] : nodes;
-        } else if (typeof(obj[k]) === 'object' && !obj[k].nodeType)
-            ret[k] = nodeElements(obj[k], parent);
+    for (let objKey in processingData) {
+        if (typeof(processingData[objKey]) === 'string') {
+            const nodes = parent.querySelectorAll(processingData[objKey]);
+            nodeElems[objKey] = (nodes.length && nodes.length == 1) ? nodes[0] : nodes;
+        } else if (typeof(processingData[k]) === 'object' && !processingData[objKey].nodeType)
+            nodeElems[objKey] = nodeElements(processingData[objKey], parent);
         else
-            ret[k] = obj[k];
+            nodeElems[objKey] = processingData[objKey];
     }
-    return ret;
-}
-
-function makeContextFree(obj) {
-    for (let k  in obj) {
-        if (typeof(obj[k]) == 'function')
-            obj[k] = obj[k].bind(obj);
-    }
+    return nodeElems;
 }
 
 export default {
@@ -87,6 +79,5 @@ export default {
     formateDateWeek: formatDateWeek,
     roundDay: roundDay,
     formatObjToURLParams: formatObjToURLParams,
-    nodeElements: nodeElements,
-    makeContextFree: makeContextFree
+    nodeElements: nodeElements
 };

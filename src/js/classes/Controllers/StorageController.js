@@ -1,6 +1,6 @@
 export default class StorageController {
     constructor() {
-        this._storId = sessionStorage.getItem('id')
+        this._storId = sessionStorage.getItem('id');
         if (!this._storId)
             sessionStorage.setItem('id', this._generateId());
         this._cache = this._loadCache();
