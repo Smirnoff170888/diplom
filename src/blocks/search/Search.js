@@ -8,7 +8,7 @@ export default class Search extends FixedComponent {
         this._inputHandlers = new Array();
         this._errorText = Utils.nodeElements('.search__error', this._container);
         if (data.q) this._container['item'].value = data.q;
-        this.validate = () => this._inputHandlers.forEach((handler) => handler());
+        this.validate = () => this._inputHandlers.forEach((inputHandler) => inputHandler());
         this.reset = () => {
             this._container.reset();
             this._submit.disabled = false;
