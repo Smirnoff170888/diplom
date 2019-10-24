@@ -9,5 +9,5 @@ const analyticsView = new AnalyticsView(storageController.getData(), {
 });
 const errorHandler = new Error('.error');
 
-analyticsView.onError = (text) => errorHandler.error(text);
+analyticsView.onError = (text) => errorHandler.add(text);
 analyticsView.render();

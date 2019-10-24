@@ -1,5 +1,6 @@
 import FixedComponent from '../../modules/FixedComponent.js';
 import Utils from '../../modules/helpers/Utils.js';
+import Consts from '../../modules/helpers/Consts.js';
 
 export default class Tabel extends FixedComponent {
     constructor(elem, data) {
@@ -11,7 +12,7 @@ export default class Tabel extends FixedComponent {
         this._byDay = {};
         const curDate = Utils.roundDay(this._data.params.from);
         for (let i = 0; i < 7; i++) {
-            this._byDay[curDate.getTime() + i*1000*60*60*24] = 0;
+            this._byDay[curDate.getTime() + (i * Consts.dates.oneDayInMs)] = 0;
         }
         this._calculate();
     }

@@ -4,11 +4,10 @@ import Err from './__err/Err.js';
 export default class Error extends FixedComponent {
     constructor(elem) {
         super(elem);
-        this._displayStyle = 'flex';
         this._errCounter = 0;
     }
 
-    error(text) {
+    add(text) {
         this.show();
         this._errCounter++;
         const err = new Err({text: text}, this._container, {

@@ -12,6 +12,8 @@
         "sourceType": "module"
     },
     "rules": {
-	"max-len": ["warn", {"code": 120, "comments": 500}]
+        "max-len": ["warn", {"code": 120, "comments": 500}],
+        "semi": ["error", "always"],
+        "indent": ["error", 4]
     }
 }

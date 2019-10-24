@@ -8,7 +8,7 @@ const errorHandler = new Error('.error');
 const commits = new Commits('.commits');
 
 api.onError = (text) => {
-    errorHandler.error(text);
+    errorHandler.add(text);
     commits.hide();
 };
 api.getCommits(commits => new Slider('.slider', commits).render());

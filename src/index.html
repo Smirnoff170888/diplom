@@ -26,15 +26,18 @@
             </nav>
         </header>
 
-        <div class="error">
+        <div class="error hide">
         </div>
 
         <section class="search">
             <h1 class="search__title">Что в мире творится?</h1>
             <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
             <form class="search__search-field">
-                <input id="news" type="text" name="item" class="search__input" placeholder="Введите тему новости" required minlength="2" maxlength="55">
-                <button id="submit" name="search" type="submit" class="button search__button">Искать</button>
+                <div class="search__wrapper">
+                    <input id="news" type="text" name="item" class="search__input" placeholder="Введите тему новости" required minlength="2" maxlength="55">
+                    <button id="submit" name="search" type="submit" class="button search__button">Искать</button>
+                </div>
+                <span class="search__error"></span>
             </form>
         </section>
 
@@ -57,7 +60,7 @@
                         <button class="button content-button" name="show" type="submit">Показать еще</button>
                     </form>
                 </div>
-                <div class="news-cards__search">
+                <div class="news-cards__search hide">
                     <i class="news-cards__circle-preloader"></i>
                     <p class="news-cards__text">Идет поиск новостей...</p>
                 </div>
