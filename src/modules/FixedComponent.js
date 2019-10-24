@@ -14,14 +14,13 @@ export default class FixedComponent {
     }
 
     hide() {
-        if (this._container.style.display != 'none')
-            this._container.style.display = 'none';
+        if (!this._container.classList.contains('hide'))
+            this._container.classList.add('hide');
     }
 
     show() {
-        const displayType = (this._displayType) ? this._displayType : 'block';
-        if (this._container.style.display != displayType)
-            this._container.style.display = displayType;
+        if (this._container.classList.contains('hide'))
+            this._container.classList.remove('hide');
     }
 
     //abstract render()

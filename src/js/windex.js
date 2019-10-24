@@ -15,7 +15,7 @@ const newsCards = new NewsCards('.news-cards', cachedData.data);
 const search = new Search('.search__search-field', cachedData.params);
 const errorHandler = new Error('.error');
 
-newsAPI.onError = (text) => errorHandler.error(text);
+newsAPI.onError = (text) => errorHandler.add(text);
 
 searchNewsController.onNewsFound = (news, params) => {
     storageController.saveData(news, params);

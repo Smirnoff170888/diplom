@@ -21,6 +21,12 @@
     outline: none;
 }
 
+.search__button:disabled {
+    background: #696969;
+    border: 1px solid #696969;
+    color: #1A1B22;
+}
+
 @media screen and (max-width: 1023px) {
     .search__button {
         width: 35.7%;

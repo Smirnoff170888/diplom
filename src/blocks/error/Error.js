@@ -8,7 +8,7 @@ export default class Error extends FixedComponent {
         this._errCounter = 0;
     }
 
-    error(text) {
+    add(text) {
         this.show();
         this._errCounter++;
         const err = new Err({text: text}, this._container, {
