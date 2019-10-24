@@ -6,7 +6,7 @@ export default class FixedComponent {
         this._fData = data;
         this._fEvents = events;
         this._fEl = {};
-        Utils.makeContextFree(this);
+        //Utils.makeContextFree(this);
     }
 
     get _container() { //protected

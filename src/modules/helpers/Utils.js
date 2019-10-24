@@ -59,7 +59,6 @@ function nodeElements(processingData, parent = document) {
         return (nodes.length && nodes.length == 1) ? nodes[0] : nodes;
     }
        
-
     if (typeof(processingData) === 'object' && processingData.nodeType)
         return processingData;
         
@@ -75,18 +74,10 @@ function nodeElements(processingData, parent = document) {
     return nodeElems;
 }
 
-function makeContextFree(obj) {
-    for (let objKey in obj) {
-        if (typeof(obj[objKey]) == 'function')
-            obj[objKey] = obj[objKey].bind(obj);
-    }
-}
-
 export default {
     formatDate: formatDate,
     formateDateWeek: formatDateWeek,
     roundDay: roundDay,
     formatObjToURLParams: formatObjToURLParams,
-    nodeElements: nodeElements,
-    makeContextFree: makeContextFree
+    nodeElements: nodeElements
 };

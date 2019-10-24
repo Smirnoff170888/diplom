@@ -4,7 +4,6 @@ import Err from './__err/Err.js';
 export default class Error extends FixedComponent {
     constructor(elem) {
         super(elem);
-        this._displayStyle = 'flex';
         this._errCounter = 0;
     }
 
