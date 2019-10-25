@@ -8,12 +8,13 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = (process.env.NODE_ENV === 'development');
 const isProd = (process.env.NODE_ENV === 'production');
 
+const config = require('./config.js');
+
 module.exports = {
     entry: {
-      index: './src/css/index.css',
-      about: './src/css/about.css',
-      analytics: './src/css/analytics.css',
-      main: './src/js/wentry.js'
+      index: ['./src/css/index.css', './src/js/windex.js'],
+      about: ['./src/css/about.css', './src/js/wabout.js'],
+      analytics: ['./src/css/analytics.css', './src/js/wanalytics.js']
     },
     output: {
             path: path.resolve(__dirname, 'dist'),
@@ -67,7 +68,8 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+            'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+            'config': JSON.stringify(config)
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash].css'

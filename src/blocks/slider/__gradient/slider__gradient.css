@@ -1,0 +1,24 @@
+@import url("./_left/slider__gradient_left.css");
+@import url("./_right/slider__gradient_right.css");
+
+.slider__gradient {
+    width: 5.5%;
+    margin: 0;
+    
+    display: flex;
+    justify-content: center;
+    padding-top: 124px;
+    padding-bottom: 102px;
+}
+
+@media screen and (max-width: 1279px) {
+    .slider__gradient {
+        width: 13.5%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .slider__gradient {
+        display: none;
+    }
+}

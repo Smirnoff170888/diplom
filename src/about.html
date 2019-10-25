@@ -20,6 +20,9 @@
             </nav>
         </header>
 
+        <div class="error hide">
+        </div>
+
         <main class="content">   
             <section class="for-clients">
                 <h2 class="content-title">Клиентам</h2>
@@ -54,7 +57,6 @@
                         </div>
                     </div>
                 </div>
-                
             </section>
         
             <section class="author">
@@ -73,87 +75,17 @@
                     <a href="https://github.com/Smirnoff170888" class="commits__link">Открыть в  Github &rsaquo;</a>
                 </div>
                 <div class="slider">
-                    <div class="slider__track" data-glide-el="track">
-                        <div class="slider__arrows" data-glide-el="controls">
-                            <div class="slider__gradient">
-                                <button class="slider__arrow slider__arrow_left" data-glid-dir="<<"></button>
-                            </div>
-                            <div class="slider__gradient">
-                                <button class="slider__arrow slider__arrow_right" data-glid-dir=">>"></button>
-                            </div>
+                    <ul class="slider__slides swiper-wrapper">
+                    </ul>
+                    <div class="slider__arrows">
+                        <div class="slider__gradient slider__gradient_left">
+                            <button class="slider__arrow slider__arrow_left"></button>
                         </div>
-                        <ul class="slider__slides">
-                            <li class="slider__container">
-                                <div class="slider__card">
-                                    <p class="slider__date">14 августа, 2019</p>
-                                    <div class="slider__info">
-                                        <img src="<%=require('./image/avaguest.jpg') %>" alt="Аватар комментатора" class="slider__avatar">
-                                        <div class="slider__user">
-                                            <h3 class="slider__name">Мария Фёдорова</h3>
-                                            <p class="slider__email">mariiifed@yandex.ru</p>
-                                        </div>
-                                    </div>
-                                    <p class="slider__text">Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-                                </div>
-                            </li>
-                            <li class="slider__container">
-                                <div class="slider__card">
-                                    <p class="slider__date">14 августа, 2019</p>
-                                    <div class="slider__info">
-                                        <img src="<%=require('./image/avaguest.jpg') %>" alt="Аватар комментатора" class="slider__avatar">
-                                        <div class="slider__user">
-                                            <h3 class="slider__name">Мария Фёдорова</h3>
-                                            <p class="slider__email">mariiifed@yandex.ru</p>
-                                        </div>
-                                    </div>
-                                    <p class="slider__text">You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open   Tools > Plugins > Available plugins   and find and install Emmet plugin.</p>
-                                </div>
-                            </li>
-                            <li class="slider__container">
-                                <div class="slider__card">
-                                    <p class="slider__date">14 августа, 2019</p>
-                                    <div class="slider__info">
-                                        <img src="<%=require('./image/avaguest.jpg') %>" alt="Аватар комментатора" class="slider__avatar">
-                                        <div class="slider__user">
-                                            <h3 class="slider__name">Мария Фёдорова</h3>
-                                            <p class="slider__email">mariiifed@yandex.ru</p>
-                                        </div>
-                                    </div>
-                                    <p class="slider__text">With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...</p>
-                                </div>
-                            </li>
-                            <li class="slider__container">
-                                <div class="slider__card">
-                                    <p class="slider__date">14 августа, 2019</p>
-                                    <div class="slider__info">
-                                        <img src="<%=require('./image/avaguest.jpg') %>" alt="Аватар комментатора" class="slider__avatar">
-                                        <div class="slider__user">
-                                            <h3 class="slider__name">Мария Фёдорова</h3>
-                                            <p class="slider__email">mariiifed@yandex.ru</p>
-                                        </div>
-                                    </div>
-                                    <p class="slider__text">Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-                                </div>
-                            </li>
-                            <li class="slider__container">
-                                <div class="slider__card">
-                                    <p class="slider__date">14 августа, 2019</p>
-                                    <div class="slider__info">
-                                        <img src="<%=require('./image/avaguest.jpg') %>" alt="Аватар комментатора" class="slider__avatar">
-                                        <div class="slider__user">
-                                            <h3 class="slider__name">Мария Фёдорова</h3>
-                                            <p class="slider__email">mariiifed@yandex.ru</p>
-                                        </div>
-                                    </div>
-                                    <p class="slider__text">Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-                                </div>
-                            </li> 
-                        </ul>
+                        <div class="slider__gradient slider__gradient_right">
+                            <button class="slider__arrow slider__arrow_right"></button>
+                        </div>
                     </div>
-                    <div class="slider__bullets" data-glid-el="controls[nav]">
-                        <button class="slider__button" data-glid-dir="=0"></button>
-                        <button class="slider__button" data-glid-dir="=1"></button>
-                        <button class="slider__button" data-glid-dir="=2"></button>
+                    <div class="slider__bullets">
                     </div>
                     <form class="slider__form">
                         <button class="button content-button" name="show" type="submit">Открыть в GitHub</button>

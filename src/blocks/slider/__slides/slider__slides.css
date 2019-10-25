@@ -1,0 +1,27 @@
+.slider__slides {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    /*overflow: hidden;*/
+    margin-left: -365px;
+    width: auto;
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 1279px) {
+    .slider__slides {
+        margin-left: -100px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .slider__slides {
+        margin-left: -12px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .slider__slides {
+        margin-left: -40px;
+    }
+}
