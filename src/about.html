@@ -59,15 +59,7 @@
                 </div>
             </section>
         
-            <section class="author">
-                <img src="<%=require('./image/myphoto.jpg') %>" alt="Фото автора" class="author__avatar">
-                <div class="author__container">
-                    <h2 class="content-title">Об&nbsp;авторе</h2>
-                    <p class="author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
-                    <p class="author__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
-                    <p class="author__text">Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
-                </div>
-            </section>
+            <%=require('./parts/author.html') %>
 
             <section class="commits">
                 <div class="commits__container">
@@ -93,24 +85,8 @@
                 </div>
             </section>
         </main>
-        
-        <footer class="footer">
-            <p class="footer__copyright">&copy;2019  Смирнова Ирина</p>
-            <div class="footer__wrapper">
-                <nav class="footer__navigation">
-                    <ul class="footer__nav">
-                        <li class="footer__item"><a class="footer__link" href="./index.html">Главная</a></li>
-                        <li class="footer__item"><a class="footer__link" href="./about.html">О проекте</a></li>
-                        <li class="footer__item"><a class="footer__link" href="https://praktikum.yandex.ru/frontend">Яндекс.Практикум</a></li>
-                    </ul>
-                </nav>
-                <div class="footer__social">
-                    <a class="footer__gh" href="https://github.com/Smirnoff170888"><img src="<%=require('./image/icon_gh.png') %>" alt="Иконка Github" class="footer__icon"></a>
-                    <a class="footer__fb" href="https://www.facebook.com/yandex.praktikum/"><img src="<%=require('./image/icon_fb.png') %>" alt="Иконка Facebook" class="footer__icon"></a>
-                </div>
-            </div>
-            
-        </footer>
+
+        <%=require('./parts/footer.html') %>
     </div>
     <script src="<%=htmlWebpackPlugin.files.chunks.about.entry %>" defer></script>
 </body>
