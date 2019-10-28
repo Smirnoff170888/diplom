@@ -1,24 +1,27 @@
 /**
- * @module
+ * @module {GhApi} GhApi
  */
 
 import Api from './Api.js';
 
+/**
+ * Коннектор Api для GitHub
+ * @extends Api
+ */
 export default class GhApi extends Api {
     /**
-     * Коннектор Api для GitHub
      * @param {Object} param0 Параметры API для GitHub
-     * @class
-     * @extends Api
      */
     constructor ({user, repo}) {
         super(config.api.github.url, {'Content-Type': 'application/json'});
         /**
          * @member _user {String} Имя пользователя Github
+         * @private
          */
         this._user = user;
         /**
          * @member _repo {String} Имя репозиторий
+         * @private
          */
         this._repo = repo;
     }

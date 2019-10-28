@@ -1,5 +1,5 @@
 /**
- * @module
+ * @module {CommitCard} CommitCard
  */
 import DynamicComponent from '../../../modules/DynamicComponent.js';
 import Utils from '../../../modules/helpers/Utils.js';
@@ -10,7 +10,7 @@ import Utils from '../../../modules/helpers/Utils.js';
  * @param {Object} data Данные, необходимые компоненту
  * @param {NodeElement} container Родительский контейнер, в конец которого будет рендерится компонент
  */
-export default class Card extends DynamicComponent {
+export default class CommitCard extends DynamicComponent {
     /**
      * Генерирует DOM-структуру компонента
      * @public

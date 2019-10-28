@@ -1,13 +1,14 @@
 /**
- * Контроллер поиска NewsApi, хранит параметры запроса, а также текущее положение среди полученных результатов
- * @module
+ * @module {SearchNewsController} SearchNewsController
  */
+
+ /**
+  * Контроллер поиска NewsApi, хранит параметры запроса, а также текущее положение среди полученных результатов
+  */
 export default class SearchNewsController {
     /**
-     * Контроллер поиска NewsApi, хранит параметры запроса, а также текущее положение среди полученных результатов
      * @param {Object} params Параметры поиска 
      * @param {NewsAPI} api API для запросов на newsapi.org
-     * @class
      */
     constructor(params, api) {
         /**
@@ -24,7 +25,7 @@ export default class SearchNewsController {
 
     /**
      * Осуществляет настройку параметров поиска, после чего выполняет первычный запрос (page = 0) к поисковой системе
-     * @param {String} query
+     * @param {String} query Текст запроса
      * @public
      */
     async newSearch(query) {
@@ -100,7 +101,7 @@ export default class SearchNewsController {
     }
 
     /**
-     * @member totalResults {NUmber} Всего найденных новостей
+     * @member totalResults {Number} Всего найденных новостей
      * @public
      */
     get totalResults() {

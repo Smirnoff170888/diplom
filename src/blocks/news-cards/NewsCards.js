@@ -1,5 +1,5 @@
 /**
- * @module
+ * @module {NewsCards} NewsCards
  */
 
 import FixedComponent from '../../modules/FixedComponent.js';
@@ -10,6 +10,10 @@ import Card from './__card/Card.js';
 import Container from './__container/Container.js';
 import Utils from '../../modules/helpers/Utils.js';
 
+/**
+ * Компонент для оторажения всего блока новостей
+ * @extends FixedComponent
+ */
 export default class NewsCards extends FixedComponent {
     /**
      * 
@@ -61,6 +65,7 @@ export default class NewsCards extends FixedComponent {
         /**
          * Функция, возвращающая суммарное количество новостей
          * @member {Function} _totalNews Функция, возвращающая суммарное количество новостей
+         * @private
          */
         this._totalNews = cb;
     }

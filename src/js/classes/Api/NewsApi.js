@@ -1,17 +1,17 @@
 /**
- * @module
+ * @module {NewsApi} NewsApi
  */
 
 import Api from './Api.js';
 import Utils from '../../../modules/helpers/Utils.js';
 
-
+/**
+ * Коннектор API для newsapi.org
+ * @extends Api
+ */
 export default class NewsApi extends Api {
     /**
-     * Коннектор API для newsapi.org
      * @param {String} token Токен доступа для запросов на newsapi.org
-     * @class
-     * @extends Api
      */
     constructor(token) {
         super(config.api.news.url, { 'Authorization' : token });

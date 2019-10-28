@@ -1,14 +1,13 @@
 /**
+ * @module {StorageController} StorageController
+ */
+
+ /**
  * Контроллер доступа к кешированным данным.
  * Данный механизм позволяет иметь свой собственный кеш для каждой отдельный вкладки за счет хранения _storId в sessionStorage.
- * А хранить и получать данные из localStorage.
- * @module
- */
+ * А также хранить и получать данные из localStorage.
+  */
 export default class StorageController {
-    /**
-     * Загружает последний закешированный объект
-     * @class
-     */
     constructor() {
         /**
          * @member _storId {String} Идентификатор кеша, строка, составленная как 'ts' + timestamp времени инициализации
@@ -28,6 +27,7 @@ export default class StorageController {
     /**
      * Генерирует новый cache id, по которому будут храниться данные в storage
      * @private
+     * @returns {String} сгенерированный id, используемый как ключ при кешировании
      */
     _generateId() {
         this._storId = 'ts' + Date.now();
@@ -76,7 +76,7 @@ export default class StorageController {
 
     /**
      * Возвращает кешированный результат
-     * @returns {Object}
+     * @returns {Object} Данные из кеша
      * @public
      */
     getData() {

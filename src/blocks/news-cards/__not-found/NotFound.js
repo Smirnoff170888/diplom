@@ -1,5 +1,5 @@
 /**
- * @module
+ * @module {NotFound} NotFound
  */
 import FixedComponent from '../../../modules/FixedComponent.js';
 

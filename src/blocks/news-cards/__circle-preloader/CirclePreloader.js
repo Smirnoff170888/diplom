@@ -1,5 +1,5 @@
 /**
- * @module
+ * @module {CirclePreloader} CirclePreloader
  */
 import FixedComponent from '../../../modules/FixedComponent.js';
 

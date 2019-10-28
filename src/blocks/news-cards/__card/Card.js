@@ -1,5 +1,5 @@
 /**
- * @module
+ * @module {NewsCardComponent} NewsCardComponent
  */
 import DynamicComponent from '../../../modules/DynamicComponent.js';
 import Utils from '../../../modules/helpers/Utils.js';

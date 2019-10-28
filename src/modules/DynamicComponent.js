@@ -1,13 +1,14 @@
 /**
- * @module
+ * @module {DynamicComponent} DynamicComponent 
  */
 
+ /**
+  * Базовый компонент, который рендерится в момент своего создания
+  */
 export default class DynamicComponent {
     /**
-     * 
      * @param {Object} data Данные, необходимые компоненту
      * @param {NodeElement} container Родительский контейнер, в конец которого будет рендерится компонент
-     * @class
      */
     constructor(data, container) {
         /**
@@ -22,6 +23,7 @@ export default class DynamicComponent {
         this._fElem = this.createDom();
         /**
          * @member {NodeElement} _fContainer Родительский компонент
+         * @private
          */
         this._fContainer = container;
     }
@@ -37,7 +39,7 @@ export default class DynamicComponent {
 
     /**
      * Доступ к DOM-элементу компонента
-     * @member {NodeElement} _fElem Dom-элемент компонента
+     * @member {NodeElement} _elem Dom-элемент компонента
      * @protected
      */
     get _elem() { //protected

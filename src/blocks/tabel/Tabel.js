@@ -1,13 +1,16 @@
 /**
- * @module
+ * @module {Tabel} Tabel
  */
 import FixedComponent from '../../modules/FixedComponent.js';
 import Utils from '../../modules/helpers/Utils.js';
 import Consts from '../../modules/helpers/Consts.js';
 
+/**
+ * Компонент для отображения блока столбчатой диаграммы
+ * @extends FixedComponent
+ */
 export default class Tabel extends FixedComponent {
     /**
-     * 
      * @param {String|NodeElement} elem Селектор DOM-элемента, служащего базой для компонента
      * @param {Object} data Данные о найденных новостях
      */
@@ -19,6 +22,7 @@ export default class Tabel extends FixedComponent {
 
         /**
          * @member {Object} _byDay Объект, содержащий количество новостей в разрезе одного дня
+         * @private
          */
         this._byDay = {};
         const curDate = Utils.roundDay(this._data.params.from);
@@ -35,6 +39,7 @@ export default class Tabel extends FixedComponent {
     _calculate() {
         /**
          * @member {Number} _maxInDay максимальное количество новостей за один день
+         * @private
          */
         this._maxInDay = 0;
         for (let i in this._data.data) {

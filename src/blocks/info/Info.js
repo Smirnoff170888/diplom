@@ -1,17 +1,18 @@
 /**
- * @module
+ * @module {Info} Info
  */
 
 import FixedComponent from '../../modules/FixedComponent.js';
 import Utils from '../../modules/helpers/Utils.js';
 
+/**
+ * Блок, в котором отображается общая статистика об упоминаниях запроса в результатах новостей
+ * @extends FixedComponent
+ */
 export default class Info extends FixedComponent {
     /**
-     * 
      * @param {NodeElement|String} elem Селектор компонента
      * @param {Object} data Данные о результатах поиска
-     * @class
-     * @extends FixedComponent
      */
     constructor(elem, data) {
         super(elem, data);

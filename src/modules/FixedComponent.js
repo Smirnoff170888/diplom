@@ -1,12 +1,14 @@
 /**
- * @module
+ * @module {FixedComponent} FixedComponent
  */
 
 import Utils from './helpers/Utils.js';
 
+/**
+ * Базовый компонент, который создается на готовом DOM
+ */
 export default class FixedComponent {
     /**
-     * Базовый компонент, который создается на готовом DOM
      * @param {String|NodeElement} elem Селектор DOM-элемента, служащего базой для компонента
      * @param {?Object} data Данные, необходимые компоненту
      * @param {?Object} events Регистрируемые коллбеки событий для данного компонента

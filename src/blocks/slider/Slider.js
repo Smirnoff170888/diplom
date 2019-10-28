@@ -1,14 +1,17 @@
 /**
- * @module
+ * @module {Slider} Slider
  */
 import FixedComponent from '../../modules/FixedComponent.js';
 import Utils from '../../modules/helpers/Utils.js';
 import Card from './__card/Card';
 import Swiper from 'swiper';
 
+/**
+ * Слайдер, отображающий карточки с коммитами
+ * @extends FixedComponent
+ */
 export default class Slider extends FixedComponent {
     /**
-     * 
      * @param {String|NodeElement} elem Селектор DOM-элемента, служащего базой для компонента
      * @param {Object} data Данные, необходимые компоненту
      */

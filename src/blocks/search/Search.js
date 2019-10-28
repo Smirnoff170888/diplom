@@ -1,17 +1,18 @@
 /**
- * @module
+ * @module {Search} Search
  */
 
 import FixedComponent from '../../modules/FixedComponent.js';
 import Utils from '../../modules/helpers/Utils.js';
 
+/**
+ * Компонент поисковой формы, управляет поведением формы и валидирует данные
+ * @extends FixedComponent
+ */
 export default class Search extends FixedComponent {
     /**
-     * Компонент поисковой формы, управляет поведением формы и валидирует данные
      * @param {String|NodeElement} elem Селектор DOM-элемента, служащего базой для компонента
      * @param {Object} data Данные, необходимые компоненту
-     * @class
-     * @extends FixedComponent
      */
     constructor(elem, data) {
         super(elem, data);
@@ -88,7 +89,7 @@ export default class Search extends FixedComponent {
      */
     set onSearch(cb) {
         /**
-         * @member {Function} cb Callback, вызываемый при Search
+         * @member {Function} _onSearch Callback, вызываемый при Search
          */
         this._onSearch = cb;
     }

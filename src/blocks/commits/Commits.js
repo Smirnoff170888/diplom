@@ -1,5 +1,5 @@
 /**
- * @module
+ * @module {Commits} Commits
  */
 import FixedComponent from '../../modules/FixedComponent.js';
 

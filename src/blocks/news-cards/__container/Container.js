@@ -1,16 +1,17 @@
 /**
- * @module
+ * @module {Container} Container
  */
 
 import FixedComponent from '../../../modules/FixedComponent.js';
 import Utils from '../../../modules/helpers/Utils.js';
 
+/**
+ * Компонент - Контейнер новостных карточек
+ * @extends FixedComponent
+ */
 export default class Container extends FixedComponent {
     /**
-     * Компонент - Контейнер новостных карточек
      * @param {String|NodeElement} elem Селектор DOM-элемента, служащего базой для компонента
-     * @class
-     * @extends FixedComponent
      */
     constructor(elem) {
         super(elem);

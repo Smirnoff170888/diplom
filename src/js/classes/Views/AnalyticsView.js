@@ -1,17 +1,18 @@
 /**
- * @module
+ * @module {AnalyticsView} AnalyticsView
  */
 
 import Info from '../../../blocks/info/Info.js';
 import Tabel from '../../../blocks/tabel/Tabel.js';
 
+/**
+ * View страницы аналитики
+ * @deprecated Нужно как-то это переработать, не ложится в модель JS-BEM
+ */
 export default class AnalyticsView {
     /**
-     * View страницы аналитики
      * @param {Object} data Результаты поиска новостей
      * @param {Object} elems Селекторы для рендера компонент Tabel и Info
-     * @class
-     * @deprecated Нужно как-то это переработать, не ложится в модель JS-BEM
      */
     constructor(data, elems) {
         /**
