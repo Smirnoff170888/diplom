@@ -24,6 +24,13 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /parts\/.*\.html$/,
+                exclude: /node_modules/,
+                use: {
+                  loader: 'html-loader'
+                }
+            },
+            {
                 test: /\.js$/,
                 use: { loader: "babel-loader" },
                 exclude: /node_modules/

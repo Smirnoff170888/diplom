@@ -1,7 +1,20 @@
+/**
+ * @module {CommitCard} CommitCard
+ */
 import DynamicComponent from '../../../modules/DynamicComponent.js';
 import Utils from '../../../modules/helpers/Utils.js';
 
-export default class Card extends DynamicComponent {
+/**
+ * Карточка для отрисовки коммита
+ * @extends DynamicComponent
+ * @param {Object} data Данные, необходимые компоненту
+ * @param {NodeElement} container Родительский контейнер, в конец которого будет рендерится компонент
+ */
+export default class CommitCard extends DynamicComponent {
+    /**
+     * Генерирует DOM-структуру компонента
+     * @public
+     */
     createDom() {
         const template = `
                 <div class="slider__card">

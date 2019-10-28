@@ -5,6 +5,7 @@
 !.nojekyll
 !package.json
 !package-lock.json
+!jsdoc.config.json
 !webpack.config.js
 !babel.config.js
 !postcss.config.js
@@ -21,3 +22,4 @@
 !/src/vendor/**/*
 !/src/image/*.png
 !/src/image/*.jpg
+!/src/parts/*.html
