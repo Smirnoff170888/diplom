@@ -1,7 +1,20 @@
+/**
+ * @module
+ */
 import DynamicComponent from '../../../modules/DynamicComponent.js';
 import Utils from '../../../modules/helpers/Utils.js';
 
+/**
+ * Карточка для отрисовки коммита
+ * @extends DynamicComponent
+ * @param {Object} data Данные, необходимые компоненту
+ * @param {NodeElement} container Родительский контейнер, в конец которого будет рендерится компонент
+ */
 export default class NewsCardComponent extends DynamicComponent {
+    /**
+     * Генерирует DOM-структуру компонента
+     * @public
+     */
     createDom() {
         const template = `
             <div class="news-cards__wrapper">

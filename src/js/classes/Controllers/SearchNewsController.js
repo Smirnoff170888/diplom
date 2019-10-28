@@ -1,9 +1,32 @@
+/**
+ * Контроллер поиска NewsApi, хранит параметры запроса, а также текущее положение среди полученных результатов
+ * @module
+ */
 export default class SearchNewsController {
+    /**
+     * Контроллер поиска NewsApi, хранит параметры запроса, а также текущее положение среди полученных результатов
+     * @param {Object} params Параметры поиска 
+     * @param {NewsAPI} api API для запросов на newsapi.org
+     * @class
+     */
     constructor(params, api) {
+        /**
+         * @member _api {NewsAPI} endpoint для newsapi.org 
+         * @private
+         */
         this._api = api;
+        /**
+         * @member _searchParams {Object} параметры поиска
+         * @private
+         */
         this._searchParams = params;
     }
 
+    /**
+     * Осуществляет настройку параметров поиска, после чего выполняет первычный запрос (page = 0) к поисковой системе
+     * @param {String} query
+     * @public
+     */
     async newSearch(query) {
         this._searchParams.q = query;
         this._searchParams.from = Date.now() - config.search.msBefore;
@@ -13,6 +36,10 @@ export default class SearchNewsController {
         await this.searchNext();
     }
 
+    /**
+     * Осуществляет поиск следующей страницы результатов
+     * @public
+     */
     async searchNext() {
         this._onQueryStart();
         const news = await this._api.searchNews({
@@ -34,18 +61,48 @@ export default class SearchNewsController {
         this._onQueryEnd();
     }
 
+    /**
+     * Вызывается в момент обнаружения новой новости
+     * @param {Function} cb Функция, которая будет зарегистрированая как коллбек
+     * @event
+     * @public
+     */
     set onNewsFound(cb) {
         this._onNewsFound = cb;
     }
 
+    /**
+     * Вызывается перед началом запроса данных с сервера
+     * @param {Function} cb Функция, которая будет зарегистрированая как коллбек
+     * @event
+     * @public
+     */
     set onQueryStart(cb) {
+        /**
+         * @member _onQueryStart {Function} Callback, вызываемый при QueryStart
+         * @private
+         */
         this._onQueryStart = cb;
     }
 
+    /**
+     * Вызывается при получении результатов от сервера
+     * @param {Function} cb Функция, которая будет зарегистрированая как коллбек
+     * @event
+     * @public
+     */
     set onQueryEnd(cb) {
+        /**
+         * @member _onQueryEnd {Function} Callback, вызываемый при QueryEnd
+         * @private
+         */
         this._onQueryEnd = cb;
     }
 
+    /**
+     * @member totalResults {NUmber} Всего найденных новостей
+     * @public
+     */
     get totalResults() {
         return this._searchParams.totalResults;
     }

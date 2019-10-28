@@ -1,3 +1,10 @@
+/**
+ * @module
+ */
+
+/**
+ * @constant {Array} strMonths Названия месяцев на русском языке в родительный падеже
+ */
 const strMonths = [
     'января',
     'февраля',
@@ -12,6 +19,9 @@ const strMonths = [
     'ноября',
     'декабря'];
 
+/**
+ * @constant {Array} strWeekdays Сокращенные названия дней недели на русском языке
+ */
 const strWeekdays = [
     'вс',
     'пн',
@@ -22,6 +32,11 @@ const strWeekdays = [
     'сб'];
 
 
+/**
+ * Преобразует дату в формат вида 12 янвяря 2019
+ * @param {String} strDate Дата в строковом формате
+ * @returns {String} Дата в нужном формате
+ */
 function formatDate(strDate) {
     const date = new Date(strDate);
     const year = date.getFullYear();
@@ -30,6 +45,11 @@ function formatDate(strDate) {
     return `${day} ${month}, ${year}`;
 }
 
+/**
+ * Преобразует дату в формат вида - 12, пн
+ * @param {Number} iDate timestamp
+ * @returns {String} Дата в нужном формате
+ */
 function formatDateWeek(iDate) {
     const date = new Date(iDate);
     const day = date.getDate();
@@ -37,12 +57,22 @@ function formatDateWeek(iDate) {
     return `${day}, ${weekday}`;
 }
 
+/**
+ * Округляет дату до начала дня
+ * @param {Number} iDate timestamp
+ * @returns {Date} Дата в нужном формате
+ */
 function roundDay(iDate) {
     const date = new Date(iDate);
     date.setHours(0, 0, 0, 0);
     return date;
 }
 
+/**
+ * Преобразует объект с параметрами ({param1: value, p2=v2}) в URI-params подстроку (?param1=value&p2=v2)
+ * @param {Object} obj Объект с параметрами
+ * @returns {String} Строка с URL-параметрами
+ */
 function formatObjToURLParams(obj) {
     let paramsPartURI = '';
     for (let objKey in obj) {
@@ -52,6 +82,12 @@ function formatObjToURLParams(obj) {
     return paramsPartURI;
 }
 
+/**
+ * Превращает входящий селектор (объект с селекторами) в 
+ * @param {Object|String|NodeElement} processingData Объект/строка/NodeElement с селекторами
+ * @param {?NodeElement} parent Родитель, от которого ищутся селекторы
+ * @returns {Object|NodeElement} Объект с NodeElement (если на входе был Object) или NodeElement (в противном случае)
+ */
 function nodeElements(processingData, parent = document) {
     const nodeElems = {};
     if (typeof(processingData) == 'string') {

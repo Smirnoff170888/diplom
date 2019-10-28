@@ -5,6 +5,7 @@
 !.nojekyll
 !package.json
 !package-lock.json
+!jsdoc.config.json
 !webpack.config.js
 !babel.config.js
 !postcss.config.js

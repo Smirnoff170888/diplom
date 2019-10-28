@@ -1,7 +1,18 @@
+/**
+ * @module
+ */
+
 import FixedComponent from '../../modules/FixedComponent.js';
 import Utils from '../../modules/helpers/Utils.js';
 
 export default class Info extends FixedComponent {
+    /**
+     * 
+     * @param {NodeElement|String} elem Селектор компонента
+     * @param {Object} data Данные о результатах поиска
+     * @class
+     * @extends FixedComponent
+     */
     constructor(elem, data) {
         super(elem, data);
         this._el.queryText = Utils.nodeElements('#queryText', this._container);
@@ -10,6 +21,10 @@ export default class Info extends FixedComponent {
         this._calculate();
     }
 
+    /**
+     * Вычисление данных об упоминаниях
+     * @private
+     */
     _calculate() {
         this._totalResults = this._data.data.length;
         this._inHeaders = this._data.data.reduce((acc, news) => {
@@ -17,6 +32,10 @@ export default class Info extends FixedComponent {
         }, 0);
     }
 
+    /**
+     * Функция рендеринга компонента
+     * @public
+     */
     render() {
         this._el.queryText.textContent = this._data.params.q;
         this._el.totalText.textContent = this._totalResults;

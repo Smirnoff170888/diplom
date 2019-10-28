@@ -1,14 +1,47 @@
+/**
+ * @module
+ */
+
 import FixedComponent from '../../modules/FixedComponent.js';
 import Utils from '../../modules/helpers/Utils.js';
 
 export default class Search extends FixedComponent {
+    /**
+     * Компонент поисковой формы, управляет поведением формы и валидирует данные
+     * @param {String|NodeElement} elem Селектор DOM-элемента, служащего базой для компонента
+     * @param {Object} data Данные, необходимые компоненту
+     * @class
+     * @extends FixedComponent
+     */
     constructor(elem, data) {
         super(elem, data);
+        /**
+         * @member {Set} _errorsSet Список полей, которые не проходят валидацию
+         * @private
+         */
         this._errorsSet = new Set();
+        /**
+         * @member {Array} _inputHandlers Массив обработчиков элементов формы
+         * @private
+         */
         this._inputHandlers = new Array();
+        /**
+         * @member {NodeElement} _errorText DOM-элемент, в который отображается ошибка ввода
+         * @private
+         */
         this._errorText = Utils.nodeElements('.search__error', this._container);
         if (data.q) this._container['item'].value = data.q;
+        /**
+         * Валидирует все поля формы
+         * @method validate
+         * @public
+         */
         this.validate = () => this._inputHandlers.forEach((inputHandler) => inputHandler());
+        /**
+         * Сбрасывает состояние формы
+         * @method reset
+         * @public
+         */
         this.reset = () => {
             this._container.reset();
             this._submit.disabled = false;
@@ -23,6 +56,11 @@ export default class Search extends FixedComponent {
         this._container.addEventListener('focus', this.validate());
     }
 
+    /**
+     * Устанавливает обработчик ввода на входящий input
+     * @param {NodeElement} elem Элемент типа input
+     * @private
+     */
     _initInputHandler(elem) {
         const validateInput = () => {
             this._inputHandler(elem);
@@ -32,23 +70,50 @@ export default class Search extends FixedComponent {
         this._inputHandlers.push(validateInput);
     }
 
+    /**
+     * Обработчик submit формы, вызывает onSearch
+     * @param {Event} event Событие submit
+     * @private
+     */
     _submitHander(event) {
         event.preventDefault();
         this._onSearch(this._container['item'].value);
     }
 
+    /**
+     * событие Search, вызывается при прохождении валидации и submit формы
+     * @param {Function} cb Функция, которая будет зарегистрированая как коллбек
+     * @event
+     * @public
+     */
     set onSearch(cb) {
+        /**
+         * @member {Function} cb Callback, вызываемый при Search
+         */
         this._onSearch = cb;
     }
 
+    /**
+     * Разблокирует все элементы формы
+     * @public
+     */
     enable() {
         this._container.forEach((elem) => elem.disabled = false);
     }
 
+    /**
+     * Блокирует все элементы формы
+     * @public
+     */
     disable() {
         this._container.forEach((elem) => elem.disabled = true);
     }
 
+    /**
+     * Валидирует элемент формы
+     * @param {NodeElement} elem Элемент формы для валидации
+     * @private
+     */
     _inputHandler(elem) {
         const minLength = elem.getAttribute('minlength');
         const maxLength = elem.getAttribute('maxlength');
