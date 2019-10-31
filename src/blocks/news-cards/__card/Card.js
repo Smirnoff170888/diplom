@@ -23,7 +23,7 @@ export default class NewsCardComponent extends DynamicComponent {
                 <h3 class="news-cards__news">${this._data.title}</h3>
                 <p class="news-cards__paragraph">${this._data.content}</p>
             </div>
-            <p class="news-cards__source">${this._data.source.name}</p>`;
+            <a href="${this._data.url}" target="_blank" class="news-cards__source">${this._data.source.name}</a>`;
         const elem = document.createElement('div');
         elem.classList = 'news-cards__card';
         elem.insertAdjacentHTML('beforeend', template);

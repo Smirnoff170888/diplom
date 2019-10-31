@@ -16,12 +16,14 @@
 @import url("./__bullet/slider__bullet.css");
 @import url("./__bullet-active/slider__bullet-active.css");
 @import url("./__form/slider__form.css");
+@import url("./_grabbing/slider_grabbing.css");
 
 .slider {
     width: 100%;
     margin: 0;
     position: relative;
     margin-top: 64px;
+    cursor: grab;
 }
 
 @media screen and (max-width: 1023px) {
