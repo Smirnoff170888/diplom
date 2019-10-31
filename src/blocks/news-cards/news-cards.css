@@ -16,6 +16,7 @@
 @import url("./__form/news-cards__form.css");
 @import url("./__wrapper/news-cards__wrapper.css");
 @import url("./__link/news-cards__link.css");
+@import url("./__pointer/news-cards__pointer.css");
 
 
 .news-cards {

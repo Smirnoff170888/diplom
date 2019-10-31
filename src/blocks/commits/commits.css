@@ -1,6 +1,7 @@
 @import url("./__container/commits__container.css");
 @import url("./__link/commits__link.css");
 @import url("./__title/commits__title.css");
+@import url("./__pointer/commits__pointer.css");
 
 .commits {
     width: 100%;

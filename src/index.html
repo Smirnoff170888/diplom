@@ -17,13 +17,15 @@
                 <source srcset="<%=require('./image/bg320.png') %>" media="(max-width: 425px)">
                 <img src="<%=require('./image/bg.png') %>" alt="Смартфон в руке" class="header__image">
             </picture>
-            <nav class="header__navigation">
-                <h2 class="header__title header__title_white">NewsAnalyzer</h2>
-                <ul class="header__nav">
-                    <li class="header__item"><a class="header__link header__link_white-active header__link_white" href="./index.html">Главная</a></li>
-                    <li class="header__item"><a class="header__link header__link_white" href="./about.html">О проекте</a></li>
-                </ul>
-            </nav>
+            <div class="header__wrapper header__wrapper_white">
+                <nav class="header__navigation">
+                    <h2 class="header__title header__title_white">NewsAnalyzer</h2>
+                    <ul class="header__nav">
+                        <li class="header__item"><a class="header__link header__link_white-active header__link_white" href="./index.html">Главная</a></li>
+                        <li class="header__item"><a class="header__link header__link_white" href="./about.html">О проекте</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <div class="error hide">
@@ -35,7 +37,7 @@
             <form class="search__search-field">
                 <div class="search__wrapper">
                     <input id="news" type="text" name="item" class="search__input" placeholder="Введите тему новости" required minlength="2" maxlength="55">
-                    <button id="submit" name="search" type="submit" class="button search__button">Искать</button>
+                    <button id="submit" name="search" type="submit" class="search__button">Искать</button>
                 </div>
                 <span class="search__error"></span>
             </form>
@@ -52,12 +54,12 @@
                 <div class="news-cards__container">
                     <div class="news-cards__result">
                         <h2 class="content-title">Результаты поиска</h2>
-                        <a href="./analytics.html" class="news-cards__link">Посмотреть аналитику &rsaquo;</a>
+                        <a href="./analytics.html" class="news-cards__link">Посмотреть аналитику<img src="<%=require('./image/pointer.png') %>" alt="Стрелка" class="news-cards__pointer"></a>
                     </div>
                     <div class="news-cards__item">
                     </div>
                     <form class="news-cards__form">
-                        <button class="button content-button" name="show" type="submit">Показать еще</button>
+                        <button class="content-button content-button_show-more" name="show" type="submit">Показать еще</button>
                     </form>
                 </div>
                 <div class="news-cards__search hide">
