@@ -20,8 +20,9 @@
 
 @media screen and (max-width: 426px) {
     .search__image {
-        width: 100%;
+        width: 426px;
         height: 536px;
+        object-fit: fill;
     }
 }
 
