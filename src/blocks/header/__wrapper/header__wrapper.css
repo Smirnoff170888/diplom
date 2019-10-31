@@ -6,4 +6,5 @@
     display: flex;
     position: relative;
     padding-bottom: 20px;
+    z-index: 1;
 }

@@ -1,0 +1,27 @@
+.search__image {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .search__image {
+        height: 400px;
+    }
+}
+
+
+@media screen and (max-width: 580px) {
+    .search__image {
+        height: 460px;
+    }
+}
+
+
+@media screen and (max-width: 426px) {
+    .search__image {
+        width: 100%;
+        height: 536px;
+    }
+}
+

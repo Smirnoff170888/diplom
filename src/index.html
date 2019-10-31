@@ -12,11 +12,6 @@
     <div class="root">
 
         <header class="header">
-            <picture>
-                <source srcset="<%=require('./image/bg768.png') %>" media="(max-width: 768px) and (min-width: 426px)">
-                <source srcset="<%=require('./image/bg320.png') %>" media="(max-width: 425px)">
-                <img src="<%=require('./image/bg.png') %>" alt="Смартфон в руке" class="header__image">
-            </picture>
             <div class="header__wrapper header__wrapper_white">
                 <nav class="header__navigation">
                     <a href="./index.html" class="header__title header__title_white">NewsAnalyzer</a>
@@ -28,19 +23,26 @@
             </div>
         </header>
 
-        <div class="error hide">
-        </div>
+        <div class="error hide"></div>
 
         <section class="search">
-            <h1 class="search__title">Что в мире творится?</h1>
-            <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
-            <form class="search__search-field">
-                <div class="search__wrapper">
-                    <input id="news" type="text" name="item" class="search__input" placeholder="Введите тему новости" required minlength="2" maxlength="55">
-                    <button id="submit" name="search" type="submit" class="search__button">Искать</button>
-                </div>
-                <span class="search__error"></span>
-            </form>
+            <picture class="search__pic">
+                <source srcset="<%=require('./image/bg768.png') %>" media="(max-width: 768px) and (min-width: 426px)" class="search__image">
+                <source srcset="<%=require('./image/bg320.png') %>" media="(max-width: 425px)" class="search__image">
+                <img src="<%=require('./image/bg.png') %>" alt="Смартфон в руке" class="search__image">
+            </picture>
+            <div class="search__container">
+                <h1 class="search__title">Что в мире творится?</h1>
+                <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
+                <form class="search__search-field">
+                    <div class="search__wrapper">
+                        <input id="news" type="text" name="item" class="search__input" placeholder="Введите тему новости" required minlength="2" maxlength="55">
+                        <button id="submit" name="search" type="submit" class="search__button">Искать</button>
+                    </div>
+                    <span class="search__error"></span>
+                </form>
+            </div>
+            
         </section>
 
         <main class="content">
