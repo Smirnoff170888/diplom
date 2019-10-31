@@ -7,6 +7,8 @@
     width: 100%;
     padding-top: 80px;
     padding-bottom: 80px;
+    position: relative;
+    background: white;
 }
 
 @media screen and (max-width: 1023px) {

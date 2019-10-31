@@ -27,7 +27,10 @@ module.exports = {
                 test: /parts\/.*\.html$/,
                 exclude: /node_modules/,
                 use: {
-                  loader: 'html-loader'
+                  loader: 'html-loader',
+                  options: {
+                    interpolate: true
+                  }
                 }
             },
             {
