@@ -60,7 +60,7 @@
             </section>
         </main>
 
-        <%=require('./parts/footer.html') %>
+        <%=require('html-loader!./parts/footer.html') %>
     </div>
     <script src="<%=htmlWebpackPlugin.files.chunks.analytics.entry %>" defer></script>
 </body>

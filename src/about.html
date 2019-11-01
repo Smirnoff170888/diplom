@@ -60,7 +60,7 @@
                 </div>
             </section>
         
-            <%=require('./parts/author.html') %>
+            <%=require('html-loader!./parts/author.html') %>
 
             <section class="commits">
                 <div class="commits__container">
@@ -87,7 +87,7 @@
             </section>
         </main>
 
-        <%=require('./parts/footer.html') %>
+        <%=require('html-loader!./parts/footer.html') %>
     </div>
     <script src="<%=htmlWebpackPlugin.files.chunks.about.entry %>" defer></script>
 </body>

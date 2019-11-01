@@ -70,10 +70,10 @@
                 </div>
             </section>
 
-            <%=require('./parts/author.html') %>
+            <%=require('html-loader!./parts/author.html') %>
         </main>
 
-        <%=require('./parts/footer.html') %>
+        <%=require('html-loader!./parts/footer.html') %>
     </div>
     <script src="<%=htmlWebpackPlugin.files.chunks.index.entry %>" defer></script>
 </body>
