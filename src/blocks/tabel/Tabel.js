@@ -44,11 +44,11 @@ export default class Tabel extends FixedComponent {
          */
         this._maxInDay = 0;
         for (let i in this._data.data) {
-            const date = Utils.roundDay(Date.parse(this._data.data[i].publishedAt));
-            if (typeof(this._byDay[date.getTime()]) == 'undefined') //anormal situation, all questions to newsapi owner
-                this._byDay[date.getTime()] = 0;
-            this._byDay[date.getTime()]++;
-            this._maxInDay = (this._byDay[date.getTime()] > this._maxInDay) ? this._byDay[date.getTime()] : this._maxInDay;
+            const ts = Utils.roundDay(Date.parse(this._data.data[i].publishedAt)).getTime();
+            if (typeof(this._byDay[ts]) == 'undefined') //anormal situation, all questions to newsapi owner
+                this._byDay[ts] = 0;
+            this._byDay[ts]++;
+            this._maxInDay = (this._byDay[ts] > this._maxInDay) ? this._byDay[ts] : this._maxInDay;
         }
     }
 
@@ -82,7 +82,7 @@ export default class Tabel extends FixedComponent {
                 barEl.appendChild(barNumber);
             }
             return barEl;
-        }
+        };
 
         for (let i in this._byDay) {
             const colEl = document.createElement('p');

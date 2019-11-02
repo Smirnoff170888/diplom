@@ -46,10 +46,10 @@ export default class Slider extends FixedComponent {
                 bulletActiveClass: 'slider__bullet-active',
             },
             on: {
-                touchStart: (event) => {
+                touchStart: () => {
                     this._container.classList.add('slider_grabbing');
                 },
-                touchEnd: (event) => {
+                touchEnd: () => {
                     this._container.classList.remove('slider_grabbing');
                 }
             }

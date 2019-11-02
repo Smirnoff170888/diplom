@@ -2,11 +2,11 @@
  * @module {StorageController} StorageController
  */
 
- /**
+/**
  * Контроллер доступа к кешированным данным.
  * Данный механизм позволяет иметь свой собственный кеш для каждой отдельный вкладки за счет хранения _storId в sessionStorage.
  * А также хранить и получать данные из localStorage.
-  */
+ */
 export default class StorageController {
     constructor() {
         /**

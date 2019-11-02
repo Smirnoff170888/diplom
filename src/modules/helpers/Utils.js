@@ -103,7 +103,7 @@ function nodeElements(processingData, parent = document) {
         if (typeof(processingData[objKey]) === 'string') {
             const nodes = parent.querySelectorAll(processingData[objKey]);
             nodeElems[objKey] = (nodes.length && nodes.length == 1) ? nodes[0] : nodes;
-        } else if (typeof(processingData[k]) === 'object' && !processingData[objKey].nodeType)
+        } else if (typeof(processingData[objKey]) === 'object' && !processingData[objKey].nodeType)
             nodeElems[objKey] = nodeElements(processingData[objKey], parent);
         else
             nodeElems[objKey] = processingData[objKey];
