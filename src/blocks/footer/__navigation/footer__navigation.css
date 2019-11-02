@@ -22,7 +22,13 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 690px) {
+    .footer__navigation {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 624px) {
     .footer__navigation {
         flex-direction: column;
         width: 76.4%;

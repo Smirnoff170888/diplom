@@ -9,3 +9,15 @@
     left: 24px;
     bottom: 82px;
 }
+
+@media screen and (max-width: 1023px) {
+    .search__error {
+        bottom: 48px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .search__error {
+        bottom: 87px;
+    }
+}
