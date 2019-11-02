@@ -24,7 +24,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /parts\/.*\.html$/,
+                test: /parts.*\.html$/,
                 exclude: /node_modules/,
                 use: {
                   loader: 'html-loader',
