@@ -19,6 +19,7 @@ export default class Tabel extends FixedComponent {
         this._el.days = Utils.nodeElements('.tabel__col', this._container);
         this._el.bars = Utils.nodeElements('.tabel__row', this._container);
         this._el.ranges = Utils.nodeElements('.tabel__range', this._container);
+        this._el.monthName = Utils.nodeElements('#month_start', this._container);
 
         /**
          * @member {Object} _byDay Объект, содержащий количество новостей в разрезе одного дня
@@ -43,11 +44,11 @@ export default class Tabel extends FixedComponent {
          */
         this._maxInDay = 0;
         for (let i in this._data.data) {
-            const date = Utils.roundDay(Date.parse(this._data.data[i].publishedAt));
-            if (typeof(this._byDay[date.getTime()]) == 'undefined') //anormal situation, all questions to newsapi owner
-                this._byDay[date.getTime()] = 0;
-            this._byDay[date.getTime()]++;
-            this._maxInDay = (this._byDay[date.getTime()] > this._maxInDay) ? this._byDay[date.getTime()] : this._maxInDay;
+            const ts = Utils.roundDay(Date.parse(this._data.data[i].publishedAt)).getTime();
+            if (typeof(this._byDay[ts]) == 'undefined') //anormal situation, all questions to newsapi owner
+                this._byDay[ts] = 0;
+            this._byDay[ts]++;
+            this._maxInDay = (this._byDay[ts] > this._maxInDay) ? this._byDay[ts] : this._maxInDay;
         }
     }
 
@@ -70,16 +71,28 @@ export default class Tabel extends FixedComponent {
             scale.append(genScale(1));
         });
 
+        const genBar = (newsCount) => {
+            const barEl = document.createElement('p');
+            barEl.classList = 'tabel__set';
+            barEl.style.width = `${newsCount / this._maxInDay * 100}%`;
+            if (newsCount > 0) {
+                const barNumber = document.createElement('span');
+                barNumber.classList = 'tabel__count';
+                barNumber.textContent = newsCount;
+                barEl.appendChild(barNumber);
+            }
+            return barEl;
+        };
+
         for (let i in this._byDay) {
             const colEl = document.createElement('p');
             colEl.classList = 'tabel__day';
             colEl.textContent = Utils.formateDateWeek(Number(i));
             this._el.days.append(colEl);
 
-            const barEl = document.createElement('p');
-            barEl.classList = 'tabel__set';
-            barEl.style.width = `${this._byDay[i] / this._maxInDay * 100}%`;
-            this._el.bars.append(barEl);
+            this._el.bars.append(genBar(this._byDay[i]));
         }
+
+        this._el.monthName.textContent = `(${Consts.dates.monthStr[(new Date(this._data.params.from)).getMonth()]})`;
     }
 }

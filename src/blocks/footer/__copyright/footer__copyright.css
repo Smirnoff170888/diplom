@@ -10,6 +10,12 @@
     width: 16.2%;
 }
 
+@media screen and (max-width: 1300px) {
+    .footer__copyright {
+        width: 25%;
+    }
+}
+
 @media screen and (max-width: 1023px) {
     .footer__copyright {
         width: 29%;
@@ -22,8 +28,14 @@
     }
 }
 
+@media screen and (max-width: 690px) {
+    .footer__copyright {
+        width: 27%;
+    }
+}
 
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 624px) {
     .footer__copyright {
         order: 2;
         width: 100%;

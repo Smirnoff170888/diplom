@@ -2,9 +2,9 @@
  * @module {DynamicComponent} DynamicComponent 
  */
 
- /**
-  * Базовый компонент, который рендерится в момент своего создания
-  */
+/**
+ * Базовый компонент, который рендерится в момент своего создания
+ */
 export default class DynamicComponent {
     /**
      * @param {Object} data Данные, необходимые компоненту

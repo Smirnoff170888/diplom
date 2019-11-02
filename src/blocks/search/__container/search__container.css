@@ -1,0 +1,36 @@
+.search__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 80px;
+    width: 42%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1279px) {
+    .search__container {
+        width: 50%;
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .search__container {
+        width: 58.6%;
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .search__container {
+        width: 75%;
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .search__container {
+        width: 90%;
+        padding-top: 30px;
+    }
+}

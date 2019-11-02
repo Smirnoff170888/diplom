@@ -18,16 +18,18 @@ module.exports = {
     },
     output: {
             path: path.resolve(__dirname, 'dist'),
-            publicPath: isProd ? '/diplom/' : '/',
             filename: 'js/[name].[chunkhash].js'
     },
     module: {
         rules: [
             {
-                test: /parts\/.*\.html$/,
+                test: /parts.*\.html$/,
                 exclude: /node_modules/,
                 use: {
-                  loader: 'html-loader'
+                  loader: 'html-loader',
+                  options: {
+                    interpolate: true
+                  }
                 }
             },
             {
@@ -37,7 +39,12 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader']
+                use: [(isDev ? 'style-loader' : {
+                  loader: MiniCssExtractPlugin.loader,
+                  options: {
+                    publicPath: '../'
+                  }
+                }), 'css-loader', 'postcss-loader']
             },
             {
                 test: /\.(png|jp?g|gif|ico|svg)$/,
@@ -59,9 +66,6 @@ module.exports = {
                             },
                             gifsicle: {
                               interlaced: false,
-                            },
-                            webp: {
-                              quality: 75
                             }
                           }
                      },

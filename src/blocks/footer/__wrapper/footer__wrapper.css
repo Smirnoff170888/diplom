@@ -16,7 +16,13 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 690px) {
+    .footer__wrapper {
+        width: 87%;
+    }
+}
+
+@media screen and (max-width: 624px) {
     .footer__wrapper {
         width: 100%;
     }

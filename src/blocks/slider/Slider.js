@@ -44,6 +44,16 @@ export default class Slider extends FixedComponent {
                 clickable: true,
                 bulletClass: 'slider__bullet',
                 bulletActiveClass: 'slider__bullet-active',
+            },
+            on: {
+                touchStart: () => {
+                    this._container.classList.remove('slider_grab');
+                    this._container.classList.add('slider_grabbing');
+                },
+                touchEnd: () => {
+                    this._container.classList.remove('slider_grabbing');
+                    this._container.classList.add('slider_grab');
+                }
             }
         });
     }

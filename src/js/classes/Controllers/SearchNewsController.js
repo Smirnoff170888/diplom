@@ -2,9 +2,9 @@
  * @module {SearchNewsController} SearchNewsController
  */
 
- /**
-  * Контроллер поиска NewsApi, хранит параметры запроса, а также текущее положение среди полученных результатов
-  */
+/**
+ * Контроллер поиска NewsApi, хранит параметры запроса, а также текущее положение среди полученных результатов
+ */
 export default class SearchNewsController {
     /**
      * @param {Object} params Параметры поиска 

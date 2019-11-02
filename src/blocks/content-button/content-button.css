@@ -1,7 +1,8 @@
+@import url("./_show-more/content-button__show-more.css");
+@import url("./_slider/content-button_slider.css");
+
 .content-button {
     width: 288px;
-    background: #FFFFFF;
-    border: 1px solid #FFFFFF;
     border-radius: 80px;
     color: #1A1B22;
     font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -12,6 +13,7 @@
     text-align: center;
     box-sizing: border-box;
     padding: 18px 22px;
+    cursor: pointer;
 }
 
 .content-button:hover {
