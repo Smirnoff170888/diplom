@@ -8,6 +8,7 @@
     color: #1A1B22;
     text-align: right;
     padding-top: 14px;
+    width: 20%;
 }
 
 .commits__link:hover {
@@ -21,12 +22,14 @@
 @media screen and (max-width: 1279px) {
     .commits__link {
         padding-top: 16px;
+        width: 30%;
     }
 }
 
 @media screen and (max-width: 1023px) {
     .commits__link {
         padding-top: 8px;
+        width: 39%;
     }
 }
 
@@ -34,6 +37,13 @@
     .commits__link {
         text-align: left;
         padding-top: 16px;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .commits__link {
+        width: 75%;
     }
 }
 
